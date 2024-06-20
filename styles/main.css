@@ -45,3 +45,94 @@ body {
     height: 2.5rem;
     background-color: #a6cccc;
 }
+
+/* style brayan */
+
+
+
+body {
+    background-image: url(/resource/fondo2.png); 
+    background-size: 100%;
+    background-repeat:repeat;
+    margin: 0;
+    padding: 0;
+    height: auto; 
+    color: ivory;
+}
+
+
+.navbar-custom {
+    background-color: transparent;
+}
+
+.nav-link.active {
+    box-shadow: 0 0 10px 2px rgb(138, 246, 36);
+    background-color: #99F543 !important; 
+    color: #13ACC9;
+}
+
+.nav-link:hover {
+    box-shadow: 0 0 10px 2px rgb(138, 246, 36);
+    background-color: #99F543 !important; 
+    color: #13ACC9 !important;
+}
+
+
+main {
+    padding: 20px; 
+
+}
+
+img{
+    width: 17vw;
+    height: 8vh;
+}
+a{
+    text-decoration: none; 
+}
+
+
+.diseño{
+    width: 50vw;
+    height: 50px;
+    background-color: rgba(255, 248, 220, 0);
+}
+
+.nav-link{
+    color: #13ACC9;
+    font-size: large;
+}
+
+
+.btn-primary {
+    background-color: #13ACC9; 
+    color: white; 
+}
+
+
+.btn-check:checked + .btn-primary {
+    background-color: #99F543; 
+    color: black;
+}
+
+.card-img-top{
+    height: 30vh;
+}
+
+.card {
+    background-color:rgba(114, 99, 99, 0.781); 
+    color: white;
+}
+
+.card .list-group-item {
+    background-color:rgba(114, 99, 99, 0.781); 
+    color: white;
+}
+
+.card:hover {
+    background-color: #13ACC9;
+}
+
+.card:hover .list-group-item {
+    background-color: #13ACC9;
+}
