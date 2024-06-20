@@ -1,54 +1,47 @@
-let urlRick= "https://rickandmortyapi.com/api/character"
+let urlBase = "https://rickandmortyapi.com/api/location/";
 
-const {createApp} = Vue
-
-const app = createApp({
-
-    data(){
-        return{
-            personajes:[],
-            personajesBK:[]
-            
-
-        }
+const app = Vue.createApp({
+    data() {
+        return {
+            ubicaciones: [],
+            filtroUbicacion: '',
+            personajesFiltrados: [],
+        };
     },
-
-    created(){
-        this.traerData(urlRick)
-        
-
+    mounted() {
+        this.traerData();
     },
+    methods: {
+        traerData() {
+            fetch(urlBase)
+                .then(response => response.json())
+                .then(data => {
+                    this.ubicaciones = data.results;
+                });
+        },
+        filtrarPersonajesPorUbicacion() {
+            if (!this.filtroUbicacion) {
+                this.personajesFiltrados = [];
+                return;
+            }
 
-    methods:{
-
-        traerData(url){
-            
-            fetch(url).then(response => response.json()).then(data => {
-                
-                this.personajes = data.results
-                
-                console.log(this.personajes);
-                
-
-                
-                
-
-            })
-        
-        }
-
+            fetch(`${urlBase}${this.filtroUbicacion}`)
+                .then(response => response.json())
+                .then(data => this.obtenerDetallesPersonajes(data.residents))
+                .then(residentes => {
+                    this.personajesFiltrados = residentes;
+                });
+        },
+        obtenerDetallesPersonajes(residentes) {
+            const detallesPromesas = residentes.map(url => fetch(url).then(response => response.json()));
+            return Promise.all(detallesPromesas);
+        },
     },
+    computed: {
+        ubicacionSeleccionada() {
+            return this.ubicaciones.find(ubicacion => ubicacion.id === this.filtroUbicacion);
+        },
+    },
+});
 
-    computed:{
-        
-
-
-
-    }
-
-    
-}).mount('#app')
-
-
-
-  
+app.mount('#app');
