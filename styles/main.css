@@ -1,0 +1,55 @@
+body {
+    background-color: #88e23b;
+    
+}
+
+main {
+    /* background-color:#88e23b; */
+    background-image: url(/resource/fondoImagen.jpg);
+}
+
+.texas {
+    background-color: #ebe480;
+}
+
+.endo {
+    background-color: #60a85f;
+}
+
+footer {
+    background-color: #a6cccc;   
+}
+
+.logo {
+    height: 55px;
+    object-fit: cover;
+}
+
+.logo2 {
+    height: 85px;
+    transform: translateY(-22px);
+}
+
+.tamanoCarrusel {
+    height: 350px;
+}
+
+.imagenCarrusel {
+    height: 350px;
+    object-fit: cover;
+}
+.pageCointainer{
+  position: relative;
+  min-height: 100vh;
+}
+
+.contentWrap {
+  padding-bottom: 2.5rem;    /* altura de pie de página */
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* altura de pie de página */
+}
