@@ -71,7 +71,7 @@
     <main id="app">
         <select class="form-select mb-3" aria-label="Default select example" v-model="filtroUbicacion"
             v-on:change="filtrarPersonajesPorUbicacion">
-            <option value="">ubicaciones</option>
+            <option value="">Locations</option>
             <option v-for="ubicacion in ubicaciones" :key="ubicacion.id" :value="ubicacion.id">
                 {{ ubicacion.name }}</option>
         </select>
@@ -102,8 +102,8 @@
                     <div class="card-body">
 
                         <h5 class="card-title fs-3">{{ personaje.name }}</h5>
-                        <p class="card-text fs-5 mt-4">Especie :{{ personaje.species }}</p>
-                        <p class="card-text fs-5 mt-4">Ultima Ubicación: {{ personaje.location.name }}</p>
+                        <p class="card-text fs-5 mt-4">Species :{{ personaje.species }}</p>
+                        <p class="card-text fs-5 mt-4">Last Location: {{ personaje.location.name }}</p>
                     </div>
                     <div class="card-body">
                         <a href="/pages/detalis.html" class="stretched-link"></a>
