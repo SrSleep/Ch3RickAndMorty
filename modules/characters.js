@@ -1,11 +1,12 @@
-const urlRickAndMorty = "https://rickandmortyapi.com/api/character/?page=1";
+const urlRickAndMorty = "https://rickandmortyapi.com/api/character/? + {pages}";
 
 const { createApp } = Vue;
 
 createApp({
   data() {
     return {
-      characters: []
+      characters: [],
+      
     };
   },
   created() {
@@ -20,6 +21,7 @@ createApp({
           console.log(this.characters);
         })
         .catch(error => console.error('Error fetching data:', error));
-    }
+    },
+    
   }
 }).mount('#app');
