@@ -8,7 +8,7 @@ const app = Vue.createApp({
             personajesFiltrados: [],
         };
     },
-    mounted() {
+    created() {
         this.traerData();
     },
     methods: {
