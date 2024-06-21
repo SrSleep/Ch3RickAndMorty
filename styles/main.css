@@ -150,3 +150,11 @@ li{
 .users{
     color: white;
 }
+
+#textLocation{
+    font-family: "Bungee", sans-serif;
+    color:  rgb(80, 247, 65);
+    font-size: 4vh;
+
+
+}
