@@ -9,16 +9,16 @@ const app = Vue.createApp({
         };
     },
     created() {
-        console.log("Ejecutando created()...");
+        
         this.traerData();
     },
     methods: {
         traerData() {
-            console.log("Ejecutando traerData()...");
+           
             fetch(urlBase)
                 .then(response => response.json())
                 .then(data => {
-                    console.log("Datos obtenidos en traerData():", data.results);
+                    
                     this.ubicaciones = data.results;
                 });
         },
@@ -26,18 +26,18 @@ const app = Vue.createApp({
             
             if (!this.filtroUbicacion) {
                 this.personajesFiltrados = [];
-                console.log("Filtro de ubicación vacío, reiniciando personajesFiltrados.");
+                
                 return;
             }
 
             fetch(`${urlBase}${this.filtroUbicacion}`)
                 .then(response => response.json())
                 .then(data => {
-                    console.log("Datos obtenidos para la ubicación filtrada:", data);
+                   
                     return this.obtenerDetallesPersonajes(data.residents);
                 })
                 .then(residentes => {
-                    console.log("Residentes obtenidos:", residentes);
+                   
                     this.personajesFiltrados = residentes;
                 });
         },
@@ -49,7 +49,7 @@ const app = Vue.createApp({
     },
     computed: {
         ubicacionSeleccionada() {
-            console.log("Ejecutando ubicacionSeleccionada()...");
+            
             return this.ubicaciones.find(ubicacion => ubicacion.id === this.filtroUbicacion);
         },
     },
