@@ -74,8 +74,11 @@
             <main id="app">
 
 
+                <h1 class="text-center">Location</h1>
+                <h3 v-if="ubicacionSeleccionada" class="text-center textLocation  my-4 display-5 fw-bold">
+                    {{ ubicacionSeleccionada.name }}
+                </h3>
 
-                <h1 class="text-center my-4 display-4 fw-bold ">Localization</h1>
 
                 <select class="form-select my-3" aria-label="Default select example" v-model="filtroUbicacion"
                     v-on:change="filtrarPersonajesPorUbicacion">
@@ -83,6 +86,9 @@
                     <option v-for="ubicacion in ubicaciones" :key="ubicacion.id" :value="ubicacion.id">
                         {{ ubicacion.name }}</option>
                 </select>
+
+                
+
 
 
                 <div class="containerCards my-4 d-flex justify-content-center">
@@ -120,7 +126,7 @@
                     </div>
                     <div v-if="filtroUbicacion === '' && ubicaciones.length > 0" class="text-center">
                         <img src="/resource/flecha1.png" alt="Default Image">
-                        <h1 class="my-4 text-center display-4 fw-bold" id="textLocation">Select a location</h1>
+                        <h1 class="my-1 text-center display-4 fw-bold textLocation " >Select a location</h1>
                         <img src="/resource/rickUbicacion.png" class="logo" alt="Default Image">
                         
                     </div>
