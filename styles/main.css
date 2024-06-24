@@ -1,7 +1,3 @@
-body {
-    background-image: url(/resource/fondoImagen.jpg);
-}
-
 .texas {
     background-color: #ebe480;
 }
@@ -11,22 +7,9 @@ body {
 }
 
 .logo {
-    height: 55px;
-    object-fit: cover;
-}
-
-.logo2 {
-    height: 85px;
-    transform: translateY(-22px);
-}
-
-.tamanoCarrusel {
-    height: 350px;
-}
-
-.imagenCarrusel {
-    height: 350px;
-    object-fit: cover;
+    width: 100%;
+    height: 50vh;
+    object-fit:cover;
 }
 
 .pageCointainer {
@@ -39,100 +22,99 @@ body {
 }
 
 .footer {
-    position: absolute;
     bottom: 0;
     width: 100%;
-    height: 2.5rem;
-    background-color: #a6cccc;
+    height: 4.5rem;
+    background-color: rgba(255, 248, 220, 0.301);
 }
 
-/* style brayan */
-
-
+/* style characters brayan */
 
 body {
-    background-image: url(/resource/fondo2.png); 
+    background-image: url(/resource/fondo2.png);
     background-size: 100%;
-    background-repeat:repeat;
+    background-repeat: repeat;
+    background-size: 100%;
     margin: 0;
     padding: 0;
-    height: auto; 
+    height: auto;
     color: ivory;
 }
 
+.logoPrincipal {
+    width: auto;
+    height: 55px;
+}
 
 .navbar-custom {
     background-color: transparent;
 }
 
-.nav-link.active {
+.anckors.active {
     box-shadow: 0 0 10px 2px rgb(138, 246, 36);
-    background-color: #99F543 !important; 
+    background-color: #99F543 !important;
     color: #13ACC9;
 }
 
-.nav-link:hover {
+.anckors:hover {
     box-shadow: 0 0 10px 2px rgb(138, 246, 36);
-    background-color: #99F543 !important; 
-    color: #13ACC9 !important;
+    background-color: #99F543 !important;
 }
 
-
-main {
-    padding: 20px; 
-
+a {
+    text-decoration: none;
 }
 
-img{
-    width: 17vw;
-    height: 8vh;
-}
-a{
-    text-decoration: none; 
+li {
+    padding: 2px;
+    min-width: 10vw;
 }
 
-
-.diseño{
+.anckorsContainer {
     width: 50vw;
     height: 50px;
     background-color: rgba(255, 248, 220, 0);
 }
 
-.nav-link{
+.anckors {
     color: #13ACC9;
-    font-size: large;
+    font-weight: bold;
 }
 
-
-.btn-primary {
-    background-color: #13ACC9; 
-    color: white; 
-}
-
-
-.btn-check:checked + .btn-primary {
-    background-color: #99F543; 
-    color: black;
-}
-
-.card-img-top{
-    height: 30vh;
-}
-
-.card {
-    background-color:rgba(114, 99, 99, 0.781); 
+.titleCharacters {
+    font-family: "Bungee", sans-serif;
     color: white;
+    font-size: 6vh;
 }
 
-.card .list-group-item {
-    background-color:rgba(114, 99, 99, 0.781); 
+
+
+.imageCards {
+    height: 40vh;
+}
+
+.cardCharaters {
     color: white;
+    background-color: rgba(114, 99, 99, 0.781);
+    border: green solid 2px;
 }
 
-.card:hover {
-    background-color: #13ACC9;
+.cardTitleCharacters{
+    font-family: "Bungee", sans-serif;
 }
 
-.card:hover .list-group-item {
-    background-color: #13ACC9;
+.cardCharaters:hover {
+    color: white;
+    background-color: black;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px 2px rgb(138, 246, 36);
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path stroke="rgba(255, 255, 255, 0.5)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>');
+}
+
+.users{
+    color: ivory;
 }
