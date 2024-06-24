@@ -58,6 +58,12 @@ const app = Vue.createApp({
                 .then(residentesDetalles => {
                     console.log("Detalles de residentes recibidos:", residentesDetalles);
                     this.personajesFiltrados = residentesDetalles;
+        
+                    // Verifica si no hay personajes filtrados y muestra un mensaje
+                    if (this.personajesFiltrados.length === 0) {
+                        // Puedes mostrar un mensaje o establecer una bandera para manejar esto
+                        console.log("No hay personajes en esta ubicación.");
+                    }
                 });
         },
         obtenerDetallesPersonajes(residentesUrls) {
