@@ -1,0 +1,24 @@
+[33m5a08f91[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/ramaAV[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: checkout: moving from ramaBF to main
+[33m37732a1[m[33m ([m[1;31morigin/ramaBF[m[33m, [m[1;32mramaBF[m[33m)[m HEAD@{1}: commit: actualizacion
+[33mb41260b[m HEAD@{2}: commit (merge): Resolved merge conflicts and merged main into ramaBF
+[33m12f3851[m HEAD@{3}: checkout: moving from main to ramaBF
+[33m5a08f91[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/ramaAV[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{4}: pull origin main: Fast-forward
+[33mb4b731a[m HEAD@{5}: checkout: moving from ramaBF to main
+[33m12f3851[m HEAD@{6}: commit: hize paginacion en la page de chararters y modifique mas styles
+[33mb4b731a[m HEAD@{7}: checkout: moving from main to ramaBF
+[33mb4b731a[m HEAD@{8}: checkout: moving from ramaBF to main
+[33mb4b731a[m HEAD@{9}: checkout: moving from main to ramaBF
+[33mb4b731a[m HEAD@{10}: checkout: moving from ramaBF to main
+[33mb4b731a[m HEAD@{11}: checkout: moving from main to ramaBF
+[33mb4b731a[m HEAD@{12}: merge ramaBF: Fast-forward
+[33m54ce6bd[m HEAD@{13}: checkout: moving from ramaBF to main
+[33mb4b731a[m HEAD@{14}: commit: mas estilos
+[33mc1d912c[m HEAD@{15}: commit: trabaje los estilos de la nav bar, el footer y las tarjetas
+[33m54ce6bd[m HEAD@{16}: checkout: moving from main to ramaBF
+[33m54ce6bd[m HEAD@{17}: merge ramaBF: Fast-forward
+[33mc77060b[m HEAD@{18}: checkout: moving from ramaBF to main
+[33m54ce6bd[m HEAD@{19}: commit: hice la pagina de personajes y los styles
+[33mc77060b[m HEAD@{20}: merge main: Fast-forward
+[33m49ddb30[m[33m ([m[1;31morigin/ramaAB[m[33m, [m[1;31morigin/brayan[m[33m)[m HEAD@{21}: checkout: moving from main to ramaBF
+[33mc77060b[m HEAD@{22}: pull: Fast-forward
+[33m00f37c7[m[33m ([m[1;31morigin/ramaMR[m[33m)[m HEAD@{23}: clone: from https://github.com/SrSleep/Ch3RickAndMorty.git

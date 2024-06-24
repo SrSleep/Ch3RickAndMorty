@@ -27,7 +27,6 @@
     width: 100%;
     height: 4.5rem;
     background-color: rgba(255, 248, 220, 0.301);
-    ;
 }
 
 /* style characters brayan */
@@ -36,13 +35,17 @@ body {
     background-image: url(/resource/fondo2.png);
     background-size: 100%;
     background-repeat: repeat;
-    background-size: auto;
+    background-size: 100%;
     margin: 0;
     padding: 0;
     height: auto;
     color: ivory;
 }
 
+.logoPrincipal {
+    width: auto;
+    height: 55px;
+}
 
 .navbar-custom {
     background-color: transparent;
@@ -57,34 +60,14 @@ body {
 .anckors:hover {
     box-shadow: 0 0 10px 2px rgb(138, 246, 36);
     background-color: #99F543 !important;
-
-}
-
-main {
-    padding: 10px;
-}
-
-.logoPrincipal {
-    width: auto;
-    height: 100px;
 }
 
 a {
     text-decoration: none;
 }
 
-span {
-    font-family: "Roboto Mono", sans-serif;
-}
-
-h1 {
-    font-family: "Bungee", sans-serif;
-    color: white;
-    font-size: 6vh;
-}
-
 li {
-    padding: 10px;
+    padding: 2px;
     min-width: 10vw;
 }
 
@@ -96,75 +79,43 @@ li {
 
 .anckors {
     color: #13ACC9;
-    font-size: large;
     font-weight: bold;
 }
 
-.checkbox {
-    background-color: #13ACC9;
+.titleCharacters {
+    font-family: "Bungee", sans-serif;
     color: white;
+    font-size: 6vh;
 }
 
-.inputCheck:checked+.checkbox {
-    background-color: #99F543;
-    color: black;
-}
+
 
 .imageCards {
-    height: 30vh;
+    height: 40vh;
 }
 
 .cardCharaters {
-    background-color: rgba(114, 99, 99, 0.781);
     color: white;
+    background-color: rgba(114, 99, 99, 0.781);
+    border: green solid 2px;
 }
 
-.cardCharaters {
-    background-color: rgba(114, 99, 99, 0.781);
-    color: white;
+.cardTitleCharacters{
+    font-family: "Bungee", sans-serif;
 }
 
 .cardCharaters:hover {
+    color: white;
     background-color: black;
     transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
     transform: scale(1.05);
+    box-shadow: 0 4px 10px 2px rgb(138, 246, 36);
 }
-
 
 .navbar-toggler-icon {
     background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path stroke="rgba(255, 255, 255, 0.5)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>');
 }
 
-@media (max-width: 992px) {
-
-    .navbar-nav {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .nav-item {
-        width: 100%;
-    }
-
-    .nav-link {
-        padding: 8px 0;
-    }
-}
-
-.users {
-    color: white;
-}
-
-.textLocation{
-    font-family: "Bungee", sans-serif;
-    color:  rgb(88, 247, 67);
-    font-size: 4vh;
-}
-
-.saltoEpisodio {
-    width: 30vw;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
+.users{
+    color: ivory;
 }

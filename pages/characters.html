@@ -11,140 +11,160 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/main.css">
-    <title>Characters</title>
+    <link rel="shortcut icon" href="/resource/favicon.ico" type="image/x-icon">
+    <title>Characters - Rick and Morty</title>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-custom">
-            <div class="container-fluid">
-                <a class="navbar-brand mx-4" href="/index.html"><img class="logoPrincipal"
-                        src="/resource/58f37720a4fa116215a9240f - copia.png" alt="logp"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse mb-3" id="navbarNav">
-                    <ul class="navbar-nav ms-auto nav-pills nav-fill gap-2 p-1 small bg-dark rounded-5 shadow-sm mx-4"
-                        id="pillNav2" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <a href="/index.html"><button class="nav-link anckors rounded-5" id="home-tab2"
-                                    data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Home</button></a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a href="/pages/characters.html"><button class="nav-link anckors active rounded-5"
-                                    id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
-                                    aria-selected="false">Characters</button></a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a href="/pages/episodes.html"><button class="nav-link anckors rounded-5" id="profile-tab2"
-                                    data-bs-toggle="tab" type="button" role="tab"
-                                    aria-selected="false">Episodes</button></a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a href="/pages/locations.html"><button class="nav-link anckors rounded-5" id="profile-tab2"
-                                    data-bs-toggle="tab" type="button" role="tab"
-                                    aria-selected="false">Localization</button></a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a href="/pages/stats.html"><button class="nav-link anckors rounded-5" id="profile-tab2"
-                                    data-bs-toggle="tab" type="button" role="tab"
-                                    aria-selected="false">Stats</button></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main id="app">
-        <h1 class="text-center">Characters</h1>
-
-        <div class="container-fluid w-50 my-4">
-            <div class="input-group">
-                <input type="search" class="form-control" placeholder="Search" aria-label="Search" id="search">
-                <span class="input-group-text"><i class="bi bi-search"></i></span>
-            </div>
-        </div>
-        </div>
-
-        <div class="d-flex justify-content-center">
-            <div class=" d-flex justify-content-around  align-content-center" style="width: 50vw;">
-                <input type="checkbox" class="btn-check inputCheck" id="btn-check-1" autocomplete="off">
-                <label class="btn btn-primary checkbox" for="btn-check-1">checkbox</label>
-
-                <input type="checkbox" class="btn-check inputCheck" id="btn-check-2" autocomplete="off">
-                <label class="btn btn-primary checkbox" for="btn-check-2">checkbox</label>
-
-                <input type="checkbox" class="btn-check inputCheck" id="btn-check-3" autocomplete="off">
-                <label class="btn btn-primary checkbox" for="btn-check-3">checkbox</label>
-
-                <input type="checkbox" class="btn-check inputCheck" id="btn-check-4" autocomplete="off">
-                <label class="btn btn-primary checkbox" for="btn-check-4">checkbox</label>
-
-                <input type="checkbox" class="btn-check inputCheck" id="btn-check-5" autocomplete="off">
-                <label class="btn btn-primary checkbox" for="btn-check-5">checkbox</label>
-            </div>
-        </div>
-
-
-
-        <div class="containerCards my-4 d-flex justify-content-center">
-            <div class="d-flex justify-content-center ml-4">
-                <div class="card mx-2 my-4 cardCharaters col-xs-12 col-sm-6 col-md-6 col-lg-3 position-relative"
-                    style="width: 18rem;" v-for="character in characters" :key="character.id">
-                    <div class="flex-wrap">
-                        <span v-if="character.status === 'Alive'"
-                            class="badge text-bg-success position-absolute top-0 end-0 m-3 p-2 fs-5">{{ character.status
-                            }}</span>
-                        <span v-else-if="character.status === 'Dead'"
-                            class="badge text-bg-danger position-absolute top-0 end-0 m-3 p-2 fs-5">{{ character.status
-                            }}</span>
-                        <span v-else="character.status === 'unknown'"
-                            class="badge text-bg-secondary position-absolute top-0 end-0 m-3 p-2 fs-5">{{
-                            character.status
-                            }}</span>
-
-                        <img :src="character.image" class="card-img-top imageCards" :alt="character.name">
+    <div class="pageCointainer">
+        <div class="contentWrap">
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-custom">
+                    <div class="container-fluid">
+                        <a class="navbar-brand mx-4" href="/index.html"><img class="logoPrincipal"
+                                src="/resource/Logo Rick_and_Morty.svg" alt="logp"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse mb-3" id="navbarNav">
+                            <ul class="navbar-nav ms-auto nav-pills nav-fill gap-2 p-1 small bg-dark rounded-5 shadow-sm mx-2 mt-2"
+                                id="pillNav2" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a href="/index.html"><button class="nav-link anckors rounded-5" id="home-tab2"
+                                            data-bs-toggle="tab" type="button" role="tab"
+                                            aria-selected="true">Home</button></a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a href="/pages/characters.html"><button class="nav-link anckors active rounded-5"
+                                            id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
+                                            aria-selected="false">Characters</button></a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a href="/pages/episodes.html"><button class="nav-link anckors rounded-5"
+                                            id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
+                                            aria-selected="false">Episodes</button></a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a href="/pages/locations.html"><button class="nav-link anckors rounded-5"
+                                            id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
+                                            aria-selected="false">Localization</button></a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a href="/pages/stats.html"><button class="nav-link anckors rounded-5"
+                                            id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
+                                            aria-selected="false">Stats</button></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title fs-3">{{ character.name }}</h5>
-                        <p class="card-text fs-4 mt-4">{{ character.species }}</p>
-                        <p class="card-text fs-4">
-                            <i v-if="character.gender === 'Male'" class="bi bi-gender-male"> {{ character.gender }}</i>
-                            <i v-else-if="character.gender === 'Female'" class="bi bi-gender-female"> {{
-                                character.gender }}</i>
+                </nav>
+            </header>
 
-                        </p>
-                    </div>
-                    <div class="card-body">
-                        <a href="/pages/detalis.html?id={{character.id}}" class="stretched-link"></a>
+            <main id="app">
+                <!-- title -->
+                <h1 class="text-center mt-4 titleCharacters">Characters</h1>
+
+                <!-- Search bar -->
+                <div class="container-fluid w-50 my-4">
+                    <div class="input-group">
+                        <input v-model="searchText" @input="searchInput" type="search" class="form-control"
+                            placeholder="Search" aria-label="Search" id="search">
+                        <span class="input-group-text"><i class="bi bi-search"></i></span>
                     </div>
                 </div>
-            </div>
+
+                <!-- list select-->
+                <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-around w-50 ">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="statusDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Status
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="statusDropdown">
+                                <li><a class="dropdown-item" href="#" @click="filterByStatus('Alive')">Alive</a></li>
+                                <li><a class="dropdown-item" href="#" @click="filterByStatus('Dead')">Dead</a></li>
+                                <li><a class="dropdown-item" href="#" @click="filterByStatus('unknown')">Unknown</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="speciesDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Species
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="speciesDropdown">
+                                <li><a class="dropdown-item" href="#" @click="filterBySpecies('Human')">Human</a></li>
+                                <li><a class="dropdown-item" href="#" @click="filterBySpecies('Alien')">Alien</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="genderDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Gender
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="genderDropdown">
+                                <li><a class="dropdown-item" href="#" @click="filterByGender('Male')">Male</a></li>
+                                <li><a class="dropdown-item" href="#" @click="filterByGender('Female')">Female</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Containers Cards -->
+                <div class="containerCards my-4 d-flex justify-content-center">
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <div class="card mx-3 mb-4 cardCharaters" style="width: 18rem;"
+                            v-for="character in filteredCharacters" :key="character.id">
+
+                            <span v-if="character.status === 'Alive'"
+                                class="badge text-bg-success position-absolute top-0 end-0 m-3 p-2 fs-5">{{ character.status }}</span>
+                            <span v-else-if="character.status === 'Dead'"
+                                class="badge text-bg-danger position-absolute top-0 end-0 m-3 p-2 fs-5">{{ character.status }}</span>
+                            <span v-else="character.status === 'unknown'"
+                                class="badge text-bg-secondary position-absolute top-0 end-0 m-3 p-2 fs-5">{{ character.status }}</span>
+
+                            <img :src="character.image" class="card-img-top imageCards" :alt="character.name">
+
+                            <div class="card-body">
+                                <h5 class="cardTitleCharacters fs-">{{ character.name }}</h5>
+                                <p class="card-text fs-4 mt-4">{{ character.species }}</p>
+                                <p class="card-text fs-4">
+                                    <i v-if="character.gender === 'Male'" class="bi bi-gender-male">
+                                        {{ character.gender }}</i>
+                                    <i v-else-if="character.gender === 'Female'" class="bi bi-gender-female">
+                                        {{ character.gender }}</i>
+                                </p>
+                            </div>
+                            <div class="card-body">
+                                <a :href="'/pages/details.html?id=' + character.id" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+                crossorigin="anonymous"></script>
+            <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+            <script src="/modules/characters.js"></script>
+
         </div>
+        <footer class="d-flex flex-row justify-content-evenly align-items-center footer">
+            <a class="users fs-5" href="https://github.com/Brayanfloresf3/"><i
+                    class="bi bi-github fs-3 mx-2"></i>BrayanFloresf3</a>
+            <a class="users fs-5" href="https://github.com/mmateitto/"><i
+                    class="bi bi-github fs-3 mx-2"></i>mmateitto</a>
+            <a class="users fs-5" href="https://github.com/Jesus-Fernandez1/"><i
+                    class="bi bi-github fs-3 mx-2"></i>Jesus-Fernandez1</a>
+            <a class="users fs-5" href="https://github.com/SrSleep/"><i class="bi bi-github fs-3 mx-2"></i>SrSleep</a>
+            <a class="users fs-5" href=""><i class="bi bi-github fs-3 mx-2"></i>Andres Bustos</a>
+        </footer>
 
-
-
-
-
-
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-        <script src="/modules/characters.js"></script>
-    </main>
-    <footer class="d-flex flex-row justify-content-evenly align-items-center footer">
-        <a class="users fs-5" href="https://github.com/Brayanfloresf3/"><i
-                class="bi bi-github fs-3 mx-2"></i>BrayanFloresf3</a>
-        <a class="users fs-5" href="https://github.com/mmateitto/"><i class="bi bi-github fs-3 mx-2"></i>mmateitto</a>
-        <a class="users fs-5" href="https://github.com/Jesus-Fernandez1/"><i
-                class="bi bi-github fs-3 mx-2"></i>Jesus-Fernandez1</a>
-        <a class="users fs-5" href="https://github.com/SrSleep/"><i class="bi bi-github fs-3 mx-2"></i>SrSleep</a>
-        <a class="users fs-5" href=""><i class="bi bi-github fs-3 mx-2"></i>Andres Bustos</a>
-    </footer>
     </div>
 </body>
 
