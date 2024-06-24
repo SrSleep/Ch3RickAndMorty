@@ -9,7 +9,7 @@
 .logo {
     width: 100%;
     height: 50vh;
-    object-fit:cover;
+    object-fit: cover;
 }
 
 .pageCointainer {
@@ -22,22 +22,24 @@
 }
 
 .footer {
+    position: absolute;
     bottom: 0;
     width: 100%;
     height: 4.5rem;
-    background-color: rgba(255, 248, 220, 0.301);;
+    background-color: rgba(255, 248, 220, 0.301);
+    ;
 }
 
 /* style characters brayan */
 
 body {
-    background-image: url(/resource/fondo2.png); 
+    background-image: url(/resource/fondo2.png);
     background-size: 100%;
-    background-repeat:repeat;
+    background-repeat: repeat;
     background-size: auto;
     margin: 0;
     padding: 0;
-    height: auto; 
+    height: auto;
     color: ivory;
 }
 
@@ -48,75 +50,77 @@ body {
 
 .anckors.active {
     box-shadow: 0 0 10px 2px rgb(138, 246, 36);
-    background-color: #99F543 !important; 
+    background-color: #99F543 !important;
     color: #13ACC9;
 }
 
 .anckors:hover {
     box-shadow: 0 0 10px 2px rgb(138, 246, 36);
-    background-color: #99F543 !important; 
- 
+    background-color: #99F543 !important;
+
 }
 
 main {
-    padding: 10px; 
+    padding: 10px;
 }
 
-.logoPrincipal{
+.logoPrincipal {
     width: auto;
     height: 100px;
 }
 
-a{    
-    text-decoration: none;  
+a {
+    text-decoration: none;
 }
-span{
+
+span {
     font-family: "Roboto Mono", sans-serif;
 }
 
-h1{
+h1 {
     font-family: "Bungee", sans-serif;
-    color:  white;
+    color: white;
     font-size: 6vh;
 }
 
-li{
+li {
     padding: 10px;
     min-width: 10vw;
 }
-.anckorsContainer{
+
+.anckorsContainer {
     width: 50vw;
     height: 50px;
     background-color: rgba(255, 248, 220, 0);
 }
 
-.anckors{
+.anckors {
     color: #13ACC9;
     font-size: large;
     font-weight: bold;
 }
 
 .checkbox {
-    background-color: #13ACC9; 
-    color: white; 
+    background-color: #13ACC9;
+    color: white;
 }
 
-.inputCheck:checked + .checkbox {
-    background-color: #99F543; 
+.inputCheck:checked+.checkbox {
+    background-color: #99F543;
     color: black;
 }
 
-.imageCards{
+.imageCards {
     height: 30vh;
 }
 
 .cardCharaters {
-    background-color:rgba(114, 99, 99, 0.781); 
+    background-color: rgba(114, 99, 99, 0.781);
     color: white;
 }
 
 .cardCharaters {
-    background-color:rgba(114, 99, 99, 0.781); 
+    background-color: rgba(114, 99, 99, 0.781);
     color: white;
 }
 
@@ -132,27 +136,35 @@ li{
 }
 
 @media (max-width: 992px) {
-    
+
     .navbar-nav {
-        width: 100%; 
+        width: 100%;
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
     }
+
     .nav-item {
         width: 100%;
     }
+
     .nav-link {
-        padding: 8px 0; 
+        padding: 8px 0;
     }
 }
-.users{
+
+.users {
     color: white;
 }
 
-#textLocation{
+#textLocation {
     font-family: "Bungee", sans-serif;
-    color:  rgb(80, 247, 65);
+    color: rgb(80, 247, 65);
     font-size: 4vh;
+}
 
-
+.saltoEpisodio {
+    width: 30vw;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }

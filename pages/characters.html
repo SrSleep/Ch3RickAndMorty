@@ -90,22 +90,23 @@
 
 
         <div class="containerCards my-4 d-flex justify-content-center">
-            <div class="d-flex flex-wrap justify-content-center ml-4">
+            <div class="d-flex justify-content-center ml-4">
                 <div class="card mx-2 my-4 cardCharaters col-xs-12 col-sm-6 col-md-6 col-lg-3 position-relative"
                     style="width: 18rem;" v-for="character in characters" :key="character.id">
+                    <div class="flex-wrap">
+                        <span v-if="character.status === 'Alive'"
+                            class="badge text-bg-success position-absolute top-0 end-0 m-3 p-2 fs-5">{{ character.status
+                            }}</span>
+                        <span v-else-if="character.status === 'Dead'"
+                            class="badge text-bg-danger position-absolute top-0 end-0 m-3 p-2 fs-5">{{ character.status
+                            }}</span>
+                        <span v-else="character.status === 'unknown'"
+                            class="badge text-bg-secondary position-absolute top-0 end-0 m-3 p-2 fs-5">{{
+                            character.status
+                            }}</span>
 
-                    <span v-if="character.status === 'Alive'"
-                        class="badge text-bg-success position-absolute top-0 end-0 m-3 p-2 fs-5">{{ character.status
-                        }}</span>
-                    <span v-else-if="character.status === 'Dead'"
-                        class="badge text-bg-danger position-absolute top-0 end-0 m-3 p-2 fs-5">{{ character.status
-                        }}</span>
-                    <span v-else="character.status === 'unknown'"
-                        class="badge text-bg-secondary position-absolute top-0 end-0 m-3 p-2 fs-5">{{ character.status
-                        }}</span>
-
-                    <img :src="character.image" class="card-img-top imageCards" :alt="character.name">
-
+                        <img :src="character.image" class="card-img-top imageCards" :alt="character.name">
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title fs-3">{{ character.name }}</h5>
                         <p class="card-text fs-4 mt-4">{{ character.species }}</p>
@@ -117,7 +118,7 @@
                         </p>
                     </div>
                     <div class="card-body">
-                        <a href="/pages/detalis.html" class="stretched-link"></a>
+                        <a href="/pages/detalis.html?id={{character.id}}" class="stretched-link"></a>
                     </div>
                 </div>
             </div>
