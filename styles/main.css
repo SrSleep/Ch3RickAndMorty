@@ -104,8 +104,8 @@ li {
 }
 
 .cardCharaters:hover {
-    color: black;
-    background-color: #99F543;
+    color: white;
+    background-color: black;
     transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
     transform: scale(1.05);
     box-shadow: 0 4px 10px 2px rgb(138, 246, 36);
