@@ -7,7 +7,8 @@ const urlRickAndMorty = "https://rickandmortyapi.com/api/character/?page=";
                 return {
                     characters: [],
                     currentPage: 1,
-                    totalPages: 42
+                    totalPages: 42,
+                    searchText: ""
                 };
             },
             created() {
@@ -21,6 +22,8 @@ const urlRickAndMorty = "https://rickandmortyapi.com/api/character/?page=";
                             this.characters = data.results;
                             console.log(this.characters);
                             console.log(urlRickAndMorty + page); 
+                            console.log(searchText);
+                            
                             
                         })
                         .catch(error => console.error('Error fetching data:', error));

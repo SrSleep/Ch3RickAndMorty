@@ -12,8 +12,6 @@
     object-fit:cover;
 }
 
-
-
 .pageCointainer {
     position: relative;
     min-height: 100vh;
@@ -43,6 +41,11 @@ body {
     color: ivory;
 }
 
+.logoPrincipal {
+    width: auto;
+    height: 55px;
+}
+
 .navbar-custom {
     background-color: transparent;
 }
@@ -58,30 +61,12 @@ body {
     background-color: #99F543 !important;
 }
 
-main {
-    padding: 10px;
-}
-
-.logoPrincipal {
-    width: auto;
-    height: 90px;
-}
-
 a {
     text-decoration: none;
 }
-span{
-    font-family: "Roboto Mono", sans-serif;
-}
-
-h1 {
-    font-family: "Bungee", sans-serif;
-    color: white;
-    font-size: 6vh;
-}
 
 li {
-    padding: 10px;
+    padding: 2px;
     min-width: 10vw;
 }
 
@@ -93,27 +78,29 @@ li {
 
 .anckors {
     color: #13ACC9;
-    font-size: large;
     font-weight: bold;
 }
 
-.checkbox {
-    background-color: #13ACC9;
+.titleCharacters {
+    font-family: "Bungee", sans-serif;
     color: white;
+    font-size: 6vh;
 }
 
-.inputCheck:checked + .checkbox {
-    background-color: #99F543;
-    color: black;
-}
+
 
 .imageCards {
-    height: 30vh;
+    height: 40vh;
 }
 
 .cardCharaters {
     color: white;
     background-color: rgba(114, 99, 99, 0.781);
+    border: green solid 2px;
+}
+
+.cardTitleCharacters{
+    font-family: "Bungee", sans-serif;
 }
 
 .cardCharaters:hover {
