@@ -1,6 +1,6 @@
 let urlGet = new URL(document.location).searchParams;
 let idUrl = urlGet.get('id');
-const urlRickAndMorty = "https://rickandmortyapi.com/api/character/2";
+const urlRickAndMorty = "https://rickandmortyapi.com/api/character/"+idUrl;
 
 const { createApp } = Vue
 
