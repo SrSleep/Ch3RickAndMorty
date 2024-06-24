@@ -27,7 +27,7 @@
                 <nav class="navbar navbar-expand-lg navbar-custom">
                     <div class="container-fluid">
                         <a class="navbar-brand mx-4" href="/index.html"><img class="logoPrincipal"
-                                src="/resource/58f37720a4fa116215a9240f - copia.png" alt="logp"></a>
+                                src="/resource/Logo Rick_and_Morty.svg" alt="logp"></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                             aria-label="Toggle navigation">
@@ -74,7 +74,7 @@
             <main id="app">
 
 
-                <h1 class="text-center">Location</h1>
+                <h1 class="text-center titleCharacters">Location</h1>
                 <h3 v-if="ubicacionSeleccionada" class="text-center textLocation  my-4 display-5 fw-bold">
                     {{ ubicacionSeleccionada.name }}
                 </h3>
@@ -133,7 +133,7 @@
 
                     <div v-if="filtroUbicacion === '' && ubicaciones.length > 0" class="text-center">
                         <img src="/resource/flecha1.png" alt="Default Image">
-                        <h1 class="my-1 text-center display-4 fw-bold textLocation " >Select a location</h1>
+                        <h2 class="my-1 text-center display-4 fw-bold titleCharacters" >Select a location</h2>
                         <img src="/resource/rickUbicacion.png" class="logo" alt="Default Image">
                         
                     </div>
