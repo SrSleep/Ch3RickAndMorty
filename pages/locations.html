@@ -71,7 +71,7 @@
 
             <main id="app">
 
-                <div class="container container-fluid">
+                <div class="container container-fluid my-4">
 
 
 
@@ -79,7 +79,8 @@
                         <div class="row  mb-4">
                             <div class="position-relative col-sm-3 ">
                                 <div class="selectLocation  ">
-                                    <select id="mySelect" class="form-select custom-select  text-center selectLocation " style="width: 150px;" aria-label="Default select example"
+                                    <select id="mySelect" class="form-select custom-select  text-center selectLocation "
+                                        style="width: 250px;" aria-label="Default select example"
                                         v-model="filtroUbicacion" v-on:change="filtrarPersonajesPorUbicacion">
                                         <option value="">Locations</option>
                                         <option v-for="ubicacion in ubicaciones" :key="ubicacion.id"
@@ -134,7 +135,7 @@
                                     <h2 class="my-3 text-center display-4 fw-bold textLocation">There are no characters
                                         in this location</h2>
                                     <img src="/resource/rickPaginaVacia.png" class="img-fluid imageLocation"
-                                        alt="Default Image">
+                                        alt="Empty location">
                                 </div>
 
                                 <div v-if="filtroUbicacion === '' && ubicaciones.length > 0" class="text-center my-4">
@@ -143,8 +144,8 @@
                                     <div class="my-4">
 
                                         <img src="/resource/rickPosition1.png" class="mb-4 imageLocation"
-                                            alt="Default Image">
-                                        
+                                            alt="Select a location Rick">
+
                                     </div>
                                 </div>
                             </div>
@@ -158,12 +159,12 @@
                         crossorigin="anonymous"></script>
                     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
                     <script src="../modules/locations.js" type="module"></script>
-
+                </div>
             </main>
 
 
         </div>
-        <footer class="d-flex flex-row justify-content-evenly mt-3 align-items-center footer">
+        <footer class="d-flex footer mt-4 justify-content-evenly align-items-center footer flex-wrap">
             <a class="users fs-5" href="https://github.com/Brayanfloresf3/"><i
                     class="bi bi-github fs-3 mx-2"></i>BrayanFloresf3</a>
             <a class="users fs-5" href="https://github.com/mmateitto/"><i
@@ -171,8 +172,8 @@
             <a class="users fs-5" href="https://github.com/Jesus-Fernandez1/"><i
                     class="bi bi-github fs-3 mx-2"></i>Jesus-Fernandez1</a>
             <a class="users fs-5" href="https://github.com/SrSleep/"><i class="bi bi-github fs-3 mx-2"></i>SrSleep</a>
-            <a class="users fs-5" href=""><i class="bi bi-github fs-3 mx-2"></i>Andres Bustos</a>
         </footer>
+
 
 
 

@@ -18,7 +18,7 @@ const app = Vue.createApp({
             fetch(`${urlBase}?page=1`)
                 .then(response => response.json())
                 .then(data => {
-                    console.log("Datos recibidos de la página 1:", data);
+                    console.log("Datos de la página 1:", data);
                     this.ubicaciones = data.results
                     const totalPages = data.info.pages;
                     
@@ -31,7 +31,7 @@ const app = Vue.createApp({
                         Promise.all(ubicacionesPagina)
                             .then(pagesData => {
                                 pagesData.forEach(page => {
-                                    console.log( "datos recibidos del resto de paginas", page);
+                                    console.log( "datos del resto de paginas", page);
                                     this.ubicaciones.push(...page.results);
                                 });
                             });
@@ -50,13 +50,13 @@ const app = Vue.createApp({
             fetch(`${urlBase}${this.filtroUbicacion}`)
                 .then(response => response.json())
                 .then(data => {
-                    console.log("Datos recibidos de la ubicación:", data);
+                    console.log("Datos de la ubicación:", data);
                     
                     let residentesUrls = data.residents;
                     return this.obtenerDetallesPersonajes(residentesUrls);
                 })
                 .then(residentesDetalles => {
-                    console.log("Detalles de residentes recibidos:", residentesDetalles);
+                    console.log("Detalles de residentes :", residentesDetalles);
                     this.personajesFiltrados = residentesDetalles;
         
                     
