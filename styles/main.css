@@ -252,8 +252,16 @@ li {
     }
 }
 #mySelect{
-    background-color: #99F543;
-    color: #040505; border: #13ACC9;
+    box-shadow: 0 0 10px 2px rgba(115, 204, 226, 0.685);
+    background-color: #212529;
+    font-weight: bold;
+    color: #13ACC9;
     box-shadow: 0 0 10px 2px rgb(30, 210, 255);
    font-weight: bold;
+}
+#mySelect option:hover{
+    box-shadow: 0 0 10px 2px rgb(138, 246, 36);
+    background-color: #99F543;
+    color: #13ACC9;
+    font-weight: bold;
 }
