@@ -88,15 +88,9 @@ li {
 
 .titleCharacters {
     font-family: "Bungee", sans-serif;
-<<<<<<< HEAD
     color: #13ACC9;
     font-size: 8vh;
     -webkit-text-stroke: 1.5px #99F543;
-=======
-    color: rgba(42, 171, 197, 0.87);
-    /* font-size: 4vw; */
-    -webkit-text-stroke: 1.5px #99F543; 
->>>>>>> main
     text-stroke: 1px #99F543;
 }
 
@@ -203,7 +197,6 @@ li {
     font-weight: bold;
 }
 
-<<<<<<< HEAD
 .textLocation {
     font-family: "Bungee", sans-serif;
     color: rgb(88, 247, 67);
@@ -241,6 +234,3 @@ li {
    font-weight: bold;
 }
 
-=======
-/* details */
->>>>>>> main
