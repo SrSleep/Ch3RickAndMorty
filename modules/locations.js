@@ -19,7 +19,7 @@ const app = Vue.createApp({
                 .then(response => response.json())
                 .then(data => {
                     console.log("Datos recibidos de la página 1:", data);
-                    this.ubicaciones = data.results;
+                    this.ubicaciones = data.results
                     const totalPages = data.info.pages;
                     // Si hay más de una página, iterar y obtener el resto de las ubicaciones
                     if (totalPages > 1) {
@@ -59,11 +59,7 @@ const app = Vue.createApp({
                     console.log("Detalles de residentes recibidos:", residentesDetalles);
                     this.personajesFiltrados = residentesDetalles;
         
-                    // Verifica si no hay personajes filtrados y muestra un mensaje
-                    if (this.personajesFiltrados.length === 0) {
-                        // Puedes mostrar un mensaje o establecer una bandera para manejar esto
-                        console.log("No hay personajes en esta ubicación.");
-                    }
+                    
                 });
         },
         obtenerDetallesPersonajes(residentesUrls) {

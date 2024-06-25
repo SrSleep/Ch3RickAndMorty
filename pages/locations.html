@@ -73,78 +73,94 @@
 
             <main id="app">
 
-
-                <h1 class="text-center">Location</h1>
-                <h3 v-if="ubicacionSeleccionada" class="text-center textLocation  my-4 display-5 fw-bold">
-                    {{ ubicacionSeleccionada.name }}
-                </h3>
-
-
-                <select class="form-select my-3" aria-label="Default select example" v-model="filtroUbicacion"
-                    v-on:change="filtrarPersonajesPorUbicacion">
-                    <option value="">Locations</option>
-                    <option v-for="ubicacion in ubicaciones" :key="ubicacion.id" :value="ubicacion.id">
-                        {{ ubicacion.name }}</option>
-                </select>
-
-                
+                <div class="container container-fluid">
 
 
 
-                <div class="containerCards my-4 d-flex justify-content-center">
-
-                    <div class="d-flex flex-wrap justify-content-center ml-4">
-                        <div class="card mx-2 my-4 cardCharaters col-xs-12 col-sm-6 col-md-6 col-lg-3 position-relative"
-                            style="width: 18rem;" v-for="personaje in personajesFiltrados" :key="personaje.id">
-
-
-                            <span v-if="personaje.status === 'Alive'"
-                                class="badge text-bg-success position-absolute top-0 end-0 m-3 p-2 fs-5">{{
-                                personaje.status }}</span>
-                            <span v-else-if="personaje.status === 'Dead'"
-                                class="badge text-bg-danger position-absolute top-0 end-0 m-3 p-2 fs-5">{{
-                                personaje.status }}</span>
-                            <span v-else="personaje.status === 'unknown'"
-                                class="badge text-bg-secondary position-absolute top-0 end-0 m-3 p-2 fs-5">{{
-                                personaje.status }}</span>
-
-
-
-                            <img :src="personaje.image" class="card-img-top imageCards" :alt="personaje.name">
-
-
-
-                            <div class="card-body">
-
-                                <h5 class="card-title fs-3">{{ personaje.name }}</h5>
-                                <p class="card-text fs-5 mt-4">Species : {{ personaje.species }}</p>
-                                <p class="card-text fs-5 mt-4">Last Location: {{ personaje.location.name }}</p>
+                    <div class="container container-fluid ">
+                        <div class="row  mb-4">
+                            <div class="position-relative col-lg-3 ">
+                                <div class="selectLocation ">
+                                    <select class="form-select  selectLocation " aria-label="Default select example"
+                                        v-model="filtroUbicacion" v-on:change="filtrarPersonajesPorUbicacion">
+                                        <option value="">Locations</option>
+                                        <option v-for="ubicacion in ubicaciones" :key="ubicacion.id"
+                                            :value="ubicacion.id">
+                                            {{ ubicacion.name }}
+                                        </option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <a href="/pages/detalis.html" class="stretched-link"></a>
+                            <div class="col-sm-9">
+
+                                <h1 class="text-center">Location</h1>
+                                <h3 v-if="ubicacionSeleccionada"
+                                    class="text-center textLocation  my-4 display-5 fw-bold">
+                                    {{ ubicacionSeleccionada.name }}
+                                </h3>
+                                <div class="containerCards d-flex flex-wrap justify-content-center">
+                                    <div class="card mx-2 my-4 cardCharaters col-xs-12 col-sm-6 col-md-6 col-lg-4 position-relative"
+                                        style="width: 18rem;" v-for="personaje in personajesFiltrados"
+                                        :key="personaje.id">
+                                        <span v-if="personaje.status === 'Alive'"
+                                            class="badge text-bg-success position-absolute top-0 end-0 m-3 p-2 fs-5">
+                                            {{ personaje.status }}
+                                        </span>
+                                        <span v-else-if="personaje.status === 'Dead'"
+                                            class="badge text-bg-danger position-absolute top-0 end-0 m-3 p-2 fs-5">
+                                            {{ personaje.status }}
+                                        </span>
+                                        <span v-else="personaje.status === 'unknown'"
+                                            class="badge text-bg-secondary position-absolute top-0 end-0 m-3 p-2 fs-5">
+                                            {{ personaje.status }}
+                                        </span>
+
+                                        <img :src="personaje.image" class="card-img-top imageCards"
+                                            :alt="personaje.name">
+
+                                        <div class="card-body">
+                                            <h5 class="card-title fs-3">{{ personaje.name }}</h5>
+                                            <p class="card-text fs-5 mt-4">Species: {{ personaje.species }}</p>
+                                            <p class="card-text fs-5 mt-4">Last Location: {{ personaje.location.name }}
+                                            </p>
+                                        </div>
+                                        <div class="card-body">
+                                            <a :href="'/pages/detalis.html?id=' + personaje.id"
+                                                class="stretched-link"></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div v-if="personajesFiltrados.length === 0 && filtroUbicacion !== ''"
+                                    class="text-center my-4">
+                                    <h2 class="my-3 text-center display-4 fw-bold textLocation">There are no characters
+                                        in this location</h2>
+                                    <img src="/resource/rickPaginaVacia.png" class="img-fluid imageLocation"
+                                        alt="Default Image">
+                                </div>
+
+                                <div v-if="filtroUbicacion === '' && ubicaciones.length > 0" class="text-center my-4">
+
+                                    <h2 class="my-1 text-center display-4 fw-bold textLocation">Select a location</h2>
+                                    <div>
+
+                                        <img src="/resource/rickPosition1.png" class="imageLocation"
+                                            alt="Default Image">
+                                        <img src="/resource/portalRick.png" class="imageLocation"
+                                            alt="Default Image">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                   
-                    <div v-if="personajesFiltrados.length === 0 && filtroUbicacion !== ''  " class="text-center">
-                        <h2 class="my-1 text-center display-4 fw-bold textLocation" >there are no characters in this location</h2>
-                        <img src="/resource/rickPaginaVacia.png" class="logo" alt="Default Image">
-                    </div>
-
-                    <div v-if="filtroUbicacion === '' && ubicaciones.length > 0" class="text-center">
-                        <img src="/resource/flecha1.png" alt="Default Image">
-                        <h1 class="my-1 text-center display-4 fw-bold textLocation " >Select a location</h1>
-                        <img src="/resource/rickUbicacion.png" class="logo" alt="Default Image">
-                        
-                    </div>
-                </div>
 
 
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-                    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-                    crossorigin="anonymous"></script>
-                <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-                <script src="../modules/locations.js" type="module"></script>
+
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+                        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+                        crossorigin="anonymous"></script>
+                    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+                    <script src="../modules/locations.js" type="module"></script>
 
             </main>
 

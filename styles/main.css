@@ -152,7 +152,29 @@ li{
 .textLocation{
     font-family: "Bungee", sans-serif;
     color:  rgb(88, 247, 67);
-    font-size: 4vh;
+    font-size: 6vh;
 
 
 }
+
+
+.imageLocation{
+    height: 50vh;
+    
+}
+
+.selectLocation{
+    max-width: 250px; 
+    width: auto;
+}
+
+.selectLocation{
+    
+ margin-top: 320px; 
+    }
+
+    @media (max-width: 992px) {
+        .selectLocation {
+            margin-top: 5px; 
+        }
+    }
