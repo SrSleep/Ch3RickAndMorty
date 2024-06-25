@@ -26,7 +26,7 @@
                 <nav class="navbar navbar-expand-lg navbar-custom">
                     <div class="container-fluid">
                         <a class="navbar-brand mx-4" href="/index.html"><img class="logoPrincipal"
-                                src="/resource/58f37720a4fa116215a9240f - copia.png" alt="logp"></a>
+                                src="/resource/Logo Rick_and_Morty.svg" alt="logp"></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                             aria-label="Toggle navigation">
@@ -66,7 +66,7 @@
                 </nav>
             </header>
             <main id="app">
-                <div class="d-flex justify-content-center mt-5">
+                <div class="d-flex flex-wrap justify-content-center mt-5 ">
                     <div>
                         <span v-if="detallesPersonaje.status === 'Alive'"
                             class="badge text-bg-success position-absolute top-30 end-30 m-3 p-2 fs-5">{{
@@ -80,15 +80,63 @@
                             class="badge text-bg-secondary position-absolute top-30 end-30 m-3 p-2 fs-5">{{
                             detallesPersonaje.status
                             }}</span>
-                        <img :src="detallesPersonaje.image" class="img-thumbnail" alt="image reference of character">
-
+                        <div class="detalleImagen">
+                            <img :src="detallesPersonaje.image" class="img-thumbnail rounded flex-wrap"
+                                alt="image reference of character">
+                        </div>
                     </div>
                     <div class="d-flex flex-column ms-3">
-                        <h1 class="titleCharacters">{{detallesPersonaje.name}}</h1>
-                        <p>{{detallesPersonaje.species}}</p>
-                        <p>{{detallesPersonaje.gender}}</p>
-                        <p>{{detallesPersonaje.location?.name}}</p>
-                        <p class="saltoEpisodio">List of episodes: {{episodios}} </p>
+                        <h1 class="titleCharacters text-center">{{detallesPersonaje.name}}</h1>
+                        <p class="textoRobot text-center " class="textoRobot">{{detallesPersonaje.species}}</p>
+                        <p class="textoRobot text-center">{{detallesPersonaje.gender}}</p>
+                        <p class="textoRobot text-center">{{detallesPersonaje.location?.name}}</p>
+                        <div class="d-flex flex-wrap justify-content-evenly">
+                            <div class="dropdown me-2 " v-if="temporada1.length != 0">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="statusDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    SEASON 1
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="statusDropdown">
+                                    <li v-for="episodio in temporada1">{{episodio.id}}: {{episodio.name}}</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown me-2" v-if="temporada2.length != 0">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="statusDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    SEASON 2
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="statusDropdown">
+                                    <li v-for="episodio in temporada2">{{episodio.id}}: {{episodio.name}}</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown me-2" v-if="temporada3.length != 0">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="statusDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    SEASON 3
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="statusDropdown">
+                                    <li v-for="episodio in temporada3">{{episodio.id}}: {{episodio.name}}</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown me-2" v-if="temporada4.length != 0">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="statusDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    SEASON 4
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="statusDropdown">
+                                    <li v-for="episodio in temporada5">{{episodio.id}}: {{episodio.name}}</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown me-2" v-if="temporada5.length != 0">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="statusDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    SEASON 5
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="statusDropdown">
+                                    <li v-for="episodio in temporada5">{{episodio.id}}: {{episodio.name}}</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
@@ -99,15 +147,15 @@
             <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
             <script src="/modules/details.js"></script>
         </div>
-        <footer class="d-flex flex-row justify-content-evenly align-items-center footer">
+        <footer class="d-flex flex-row flex-wrap justify-content-evenly align-items-center footer">
             <a class="users fs-5" href="https://github.com/Brayanfloresf3/"><i
                     class="bi bi-github fs-3 mx-2"></i>BrayanFloresf3</a>
             <a class="users fs-5" href="https://github.com/mmateitto/"><i
                     class="bi bi-github fs-3 mx-2"></i>mmateitto</a>
             <a class="users fs-5" href="https://github.com/Jesus-Fernandez1/"><i
                     class="bi bi-github fs-3 mx-2"></i>Jesus-Fernandez1</a>
-            <a class="users fs-5" href="https://github.com/SrSleep/"><i class="bi bi-github fs-3 mx-2"></i>SrSleep</a>
-            <a class="users fs-5" href=""><i class="bi bi-github fs-3 mx-2"></i>Andres Bustos</a>
+            <a class="users fs-5" href="https://github.com/SrSleep/">
+                <i class="bi bi-github fs-3 mx-2"></i>SrSleep</a>
         </footer>
     </div>
 </body>
