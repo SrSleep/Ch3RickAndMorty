@@ -7,7 +7,7 @@
 }
 
 .logo {
-    width: 50vw;
+    width: 100%;
     height: 60vh;
     object-fit: cover;
 }
@@ -22,10 +22,32 @@
 }
 
 .footer {
+    position:absolute;
     bottom: 0;
     width: 100%;
-    height: 4.5rem;
+    height: 2.5rem;
     background-color: rgba(255, 248, 220, 0.301);
+}
+
+.detalleImagen {
+    width: 20rem;
+    margin: 0;
+}
+
+.tituloHome {
+    font-family: "Bungee", sans-serif;
+    color: white;
+    font-size: 3vh;
+}
+
+.textoRobot {
+    font-family: "Roboto Mono", monospace;
+    color: white;
+}
+
+.detalleImagen {
+    width: 20rem;
+    margin: 0;
 }
 
 /* style characters brayan */
@@ -40,8 +62,9 @@ body {
     height: auto;
 }
 
-main{
+main {
     min-height: 67vh;
+    margin-bottom: 4vh;
 }
 
 .logoPrincipal {
@@ -51,7 +74,7 @@ main{
 
 .navbar-custom {
     background-color: transparent;
-    
+
 }
 
 .anckors.active {
@@ -63,7 +86,7 @@ main{
 .anckors:hover {
     box-shadow: 0 0 10px 2px rgb(138, 246, 36);
     background-color: #99F543 !important;
-    
+
 }
 
 a {
@@ -88,11 +111,13 @@ li {
 
 .titleCharacters {
     font-family: "Bungee", sans-serif;
-    color: #13ACC9;
-    font-size: 8vh;
+    color: rgba(42, 171, 197, 0.87);
+    /* font-size: 4vw; */
     -webkit-text-stroke: 1.5px #99F543;
     text-stroke: 1px #99F543;
 }
+
+
 
 .imageCards {
     height: 40vh;
@@ -106,7 +131,7 @@ li {
     border-radius: 20px;
 }
 
-.cardDetails{
+.cardDetails {
     color: black;
     background-color: #A9D3E9;
     border-radius: 20px;
@@ -133,7 +158,7 @@ li {
     color: ivory;
 }
 
-.textCharacters{
+.textCharacters {
     color: ivory;
 }
 
@@ -197,8 +222,8 @@ li {
 }
 
 .dropdown-item-custom {
-    color: #13ACC9; 
-  }
+    color: #13ACC9;
+}
 
 .dropdown-menu-custom {
     background-color: #212529;
@@ -214,40 +239,52 @@ li {
     font-weight: bold;
 }
 
+/* details */
+.dropdown-toggle-custom-details {
+    box-shadow: 0 0 10px 2px rgba(115, 204, 226, 0.685);
+    background-color: #212529;
+    font-weight: bold;
+    color: #13ACC9;
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+    min-width: 10vw;
+}
+@media (max-width: 776px) {
+    .footer {
+        height: 4.5rem; /* Cambia el valor a lo que necesites */
+    }
+}
+/* location */
+.imageLocation {
+    height: 50vh;
+
+}
+.selectLocation {
+    margin-top: 330px;
+}
 .textLocation {
     font-family: "Bungee", sans-serif;
     color: rgb(88, 247, 67);
     font-size: 4vh;
     -webkit-text-stroke: 1.5px #13ACC9;
-
-
 }
-
-
-.imageLocation {
-    height: 50vh;
-
-}
-
-
-.selectLocation {
-
-
-
-    margin-top: 330px;
-}
-
 @media (max-width: 576px) {
     .selectLocation {
         margin-top: 50px;
     }
 }
-
 #mySelect{
-
-    background-color: #99F543;
-    color: #040505; border: #13ACC9;
+    box-shadow: 0 0 10px 2px rgba(115, 204, 226, 0.685);
+    background-color: #212529;
+    font-weight: bold;
+    color: #13ACC9;
     box-shadow: 0 0 10px 2px rgb(30, 210, 255);
    font-weight: bold;
 }
-
+#mySelect option:hover{
+    box-shadow: 0 0 10px 2px rgb(138, 246, 36);
+    background-color: #99F543;
+    color: #13ACC9;
+    font-weight: bold;
+}
