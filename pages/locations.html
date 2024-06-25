@@ -77,15 +77,15 @@
 
 
 
-                    <div class="container container-fluid ">
+                    <div class=" ">
                         <div class="row  mb-4">
-                            <div class="position-relative col-lg-3 ">
-                                <div class="selectLocation ">
-                                    <select class="form-select  selectLocation " aria-label="Default select example"
+                            <div class="position-relative col-sm-3 ">
+                                <div class="selectLocation  ">
+                                    <select id="mySelect" class="form-select custom-select  text-center selectLocation " style="width: 150px;" aria-label="Default select example"
                                         v-model="filtroUbicacion" v-on:change="filtrarPersonajesPorUbicacion">
                                         <option value="">Locations</option>
                                         <option v-for="ubicacion in ubicaciones" :key="ubicacion.id"
-                                            :value="ubicacion.id">
+                                            :value="ubicacion.id" class="">
                                             {{ ubicacion.name }}
                                         </option>
                                     </select>
@@ -93,7 +93,7 @@
                             </div>
                             <div class="col-sm-9">
 
-                                <h1 class="text-center">Location</h1>
+                                <h1 class="text-center titleCharacters my-1 ">Location</h1>
                                 <h3 v-if="ubicacionSeleccionada"
                                     class="text-center textLocation  my-4 display-5 fw-bold">
                                     {{ ubicacionSeleccionada.name }}
@@ -141,13 +141,12 @@
 
                                 <div v-if="filtroUbicacion === '' && ubicaciones.length > 0" class="text-center my-4">
 
-                                    <h2 class="my-1 text-center display-4 fw-bold textLocation">Select a location</h2>
-                                    <div>
+                                    <h4 class="my-1 text-center display-4 fw-bold textLocation">Select a location</h4>
+                                    <div class="my-4">
 
-                                        <img src="/resource/rickPosition1.png" class="imageLocation"
+                                        <img src="/resource/rickPosition1.png" class="mb-4 imageLocation"
                                             alt="Default Image">
-                                        <img src="/resource/portalRick.png" class="imageLocation"
-                                            alt="Default Image">
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -166,7 +165,7 @@
 
 
         </div>
-        <footer class="d-flex flex-row justify-content-evenly align-items-center footer">
+        <footer class="d-flex flex-row justify-content-evenly mt-3 align-items-center footer">
             <a class="users fs-5" href="https://github.com/Brayanfloresf3/"><i
                     class="bi bi-github fs-3 mx-2"></i>BrayanFloresf3</a>
             <a class="users fs-5" href="https://github.com/mmateitto/"><i

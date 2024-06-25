@@ -84,7 +84,7 @@ li {
     font-family: "Bungee", sans-serif;
     color: #13ACC9;
     font-size: 8vh;
-    -webkit-text-stroke: 1.5px #99F543; 
+    -webkit-text-stroke: 1.5px #99F543;
     text-stroke: 1px #99F543;
 }
 
@@ -97,7 +97,7 @@ li {
     background-color: rgba(114, 99, 99, 0.781);
 }
 
-.cardTitleCharacters{
+.cardTitleCharacters {
     font-family: "Bungee", sans-serif;
 }
 
@@ -113,17 +113,17 @@ li {
     background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path stroke="rgba(255, 255, 255, 0.5)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>');
 }
 
-.users{
+.users {
     color: ivory;
 }
 
 .form-control {
     border-radius: 20px;
     border-color: #99F543;
-    padding: 10px 15px; 
-    font-size: 16px; 
-    box-shadow: 0 1px 1px 1px rgb(138, 246, 36); 
-    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    padding: 10px 15px;
+    font-size: 16px;
+    box-shadow: 0 1px 1px 1px rgb(138, 246, 36);
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     background-color: rgb(212, 239, 245);
 }
 
@@ -134,9 +134,9 @@ li {
 }
 
 .bi-search {
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     color: #13ACC9;
-    transition: color 0.3s ease-in-out; 
+    transition: color 0.3s ease-in-out;
 }
 
 .dropdown-toggle-custom {
@@ -147,7 +147,8 @@ li {
     border: none;
 }
 
-.dropdown-toggle-custom:hover, .dropdown-toggle-custom:focus {
+.dropdown-toggle-custom:hover,
+.dropdown-toggle-custom:focus {
     box-shadow: 0 0 10px 2px rgb(138, 246, 36);
     background-color: #99F543;
     color: #13ACC9;
@@ -156,40 +157,51 @@ li {
 .dropdown-menu-custom {
     background-color: #212529;
     color: #13ACC9;
+
 }
 
-.dropdown-item-custom.active, .dropdown-item-custom:hover {
+.dropdown-item-custom.active,
+.dropdown-item-custom:hover {
     box-shadow: 0 0 10px 2px rgb(138, 246, 36);
-    background-color: #99F543 ;
-    color: #13ACC9 ;
+    background-color: #99F543;
+    color: #13ACC9;
     font-weight: bold;
 }
-.textLocation{
+
+.textLocation {
     font-family: "Bungee", sans-serif;
-    color:  rgb(88, 247, 67);
-    font-size: 6vh;
+    color: rgb(88, 247, 67);
+    font-size: 4vh;
+    -webkit-text-stroke: 1.5px #13ACC9;
 
 
 }
 
 
-.imageLocation{
+.imageLocation {
     height: 50vh;
-    
+
 }
 
-.selectLocation{
-    max-width: 250px; 
-    width: auto;
+
+.selectLocation {
+
+
+
+    margin-top: 330px;
 }
 
-.selectLocation{
-    
- margin-top: 320px; 
+@media (max-width: 576px) {
+    .selectLocation {
+        margin-top: 50px;
     }
+}
 
-    @media (max-width: 992px) {
-        .selectLocation {
-            margin-top: 5px; 
-        }
-    }
+#mySelect{
+
+    background-color: #99F543;
+    color: #000000;
+    box-shadow: 0 0 10px 2px rgb(30, 210, 255);
+   font-weight: bold;
+}
+
