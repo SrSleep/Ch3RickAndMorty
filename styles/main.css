@@ -7,9 +7,9 @@
 }
 
 .logo {
-    width: 100%;
-    height: 50vh;
-    object-fit:cover;
+    width: 50vw;
+    height: 60vh;
+    object-fit: cover;
 }
 
 .pageCointainer {
@@ -38,7 +38,10 @@ body {
     margin: 0;
     padding: 0;
     height: auto;
-    color: ivory;
+}
+
+main{
+    min-height: 67vh;
 }
 
 .logoPrincipal {
@@ -48,6 +51,7 @@ body {
 
 .navbar-custom {
     background-color: transparent;
+    
 }
 
 .anckors.active {
@@ -59,6 +63,7 @@ body {
 .anckors:hover {
     box-shadow: 0 0 10px 2px rgb(138, 246, 36);
     background-color: #99F543 !important;
+    
 }
 
 a {
@@ -83,29 +88,38 @@ li {
 
 .titleCharacters {
     font-family: "Bungee", sans-serif;
-    color: white;
-    font-size: 6vh;
+    color: #13ACC9;
+    font-size: 8vh;
+    -webkit-text-stroke: 1.5px #99F543;
+    text-stroke: 1px #99F543;
 }
-
-
 
 .imageCards {
     height: 40vh;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .cardCharaters {
-    color: white;
-    background-color: rgba(114, 99, 99, 0.781);
-    border: green solid 2px;
+    color: black;
+    background-color: #A9D3E9;
+    border-radius: 20px;
 }
 
-.cardTitleCharacters{
+.cardDetails{
+    color: black;
+    background-color: #A9D3E9;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px 2px rgb(138, 246, 36);
+}
+
+.cardTitleCharacters {
     font-family: "Bungee", sans-serif;
 }
 
 .cardCharaters:hover {
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: #A9D3E9;
     transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
     transform: scale(1.05);
     box-shadow: 0 4px 10px 2px rgb(138, 246, 36);
@@ -115,6 +129,108 @@ li {
     background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path stroke="rgba(255, 255, 255, 0.5)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>');
 }
 
-.users{
+.users {
     color: ivory;
 }
+
+.textCharacters{
+    color: ivory;
+}
+
+/* search bar */
+.form-control {
+    border-radius: 20px;
+    border-color: #99F543;
+    padding: 10px 15px;
+    font-size: 16px;
+    box-shadow: 0 1px 1px 1px rgb(138, 246, 36);
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: rgb(212, 239, 245);
+}
+
+.form-control:focus {
+    border-color: #99F543;
+    box-shadow: 0 4px 10px 2px rgb(138, 246, 36);
+    background-color: rgb(212, 239, 245);
+}
+
+.bi-search {
+    font-size: 1.2rem;
+    color: #13ACC9;
+    transition: color 0.3s ease-in-out;
+}
+
+/* list select */
+.dropdown-toggle-custom {
+    box-shadow: 0 0 10px 2px rgba(115, 204, 226, 0.685);
+    background-color: #212529;
+    font-weight: bold;
+    color: #13ACC9;
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+    min-width: 14vw;
+}
+
+.dropdown-toggle-custom:hover,
+.dropdown-toggle-custom:focus {
+    box-shadow: 0 0 10px 2px rgb(138, 246, 36);
+    background-color: #99F543;
+    color: #13ACC9;
+}
+
+.dropdown-item-custom {
+    color: #13ACC9; 
+  }
+
+.dropdown-menu-custom {
+    background-color: #212529;
+    color: #13ACC9;
+
+}
+
+.dropdown-item-custom.active,
+.dropdown-item-custom:hover {
+    box-shadow: 0 0 10px 2px rgb(138, 246, 36);
+    background-color: #99F543;
+    color: #13ACC9;
+    font-weight: bold;
+}
+
+.textLocation {
+    font-family: "Bungee", sans-serif;
+    color: rgb(88, 247, 67);
+    font-size: 4vh;
+    -webkit-text-stroke: 1.5px #13ACC9;
+
+
+}
+
+
+.imageLocation {
+    height: 50vh;
+
+}
+
+
+.selectLocation {
+
+
+
+    margin-top: 330px;
+}
+
+@media (max-width: 576px) {
+    .selectLocation {
+        margin-top: 50px;
+    }
+}
+
+#mySelect{
+
+    background-color: #99F543;
+    color: #040505; border: #13ACC9;
+    box-shadow: 0 0 10px 2px rgb(30, 210, 255);
+   font-weight: bold;
+}
+
