@@ -75,9 +75,12 @@
                     </div>
                 </div>
 
+                <!-- modal favorities -->
+               
+
                 <!-- list select-->
                 <div class="d-flex justify-content-center">
-                    <div class="d-flex justify-content-around w-50">
+                    <div class="d-flex justify-content-around w-50 mb-4">
                         <div class="dropdown">
                             <button class="btn dropdown-toggle dropdown-toggle-custom" type="button" id="statusDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                                 Status
@@ -96,8 +99,17 @@
                             <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="speciesDropdown">
                                 <li><a class="dropdown-item dropdown-item-custom" href="#" @click="filterBySpecies('Human')">Human</a></li>
                                 <li><a class="dropdown-item dropdown-item-custom" href="#" @click="filterBySpecies('Alien')">Alien</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="#" @click="filterBySpecies('Humanoid')">Humanoid</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="#" @click="filterBySpecies('unknown')">Unknown</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="#" @click="filterBySpecies('Poopybutthole')">Poopybutthole</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="#" @click="filterBySpecies('Mythological Creature')">Mythological Creature</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="#" @click="filterBySpecies('Animal')">Animal</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="#" @click="filterBySpecies('Robot')">Robot</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="#" @click="filterBySpecies('Cronenberg')">Cronenberg</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="#" @click="filterBySpecies('Disease')">Disease</a></li>
                             </ul>
                         </div>
+                        
         
                         <div class="dropdown">
                             <button class="btn dropdown-toggle dropdown-toggle-custom" type="button" id="genderDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -113,7 +125,14 @@
 
                 <!-- Containers Cards -->
                 <div class="containerCards my-4 d-flex justify-content-center">
+
+                    <div v-if="filteredCharacters.length === 0" class="text-center">
+                        <h2 class="mb-4 text-center textCharacters" >No characters were found matching your search.<br>Try a search term or filter.</h2>
+                        <img src="/resource/rickPaginaVacia.png" class="logo" alt="Default Image">
+                    </div>
+
                     <div class="d-flex flex-wrap justify-content-center">
+                        
                         <div class="card mx-3 mb-4 cardCharaters" style="width: 18rem;"
                             v-for="character in filteredCharacters" :key="character.id">
 
@@ -138,9 +157,11 @@
                             </div>
                             <div class="card-body">
                                 <a :href="'/pages/detalis.html?id=' + character.id" class="stretched-link"></a>
+                                <button><i class="bi bi-star"></i></button>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </main>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
