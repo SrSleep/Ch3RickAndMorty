@@ -111,10 +111,81 @@
             <a class="users fs-5" href="https://github.com/Jesus-Fernandez1/"><i
                     class="bi bi-github fs-3 mx-2"></i>Jesus-Fernandez1</a>
             <a class="users fs-5" href="https://github.com/SrSleep/"><i class="bi bi-github fs-3 mx-2"></i>SrSleep</a>
-            <a class="users fs-5" href=""><i class="bi bi-github fs-3 mx-2"></i>Andres Bustos</a>
         </footer>
     </div>
 </body>
 
 
 </html>
+
+
+
+
+<div v-if="filteredCharacters.length === 0" class="text-center">
+    <h2 class="mb-4 text-center textCharacters">No characters were found matching your
+        search.<br>Try a search term or filter.</h2>
+    <img src="/resource/rickPaginaVacia.png" class="logo" alt="Default Image">
+</div>
+
+<div class="d-flex flex-wrap justify-content-center">
+    <div class="card mx-3 mb-4 cardCharaters" style="width: 18rem;" v-for="character in filteredCharacters"
+        :key="character.id">
+
+        <span v-if="character.status === 'Alive'"
+            class="badge text-bg-success position-absolute top-0 end-0 m-3 p-2 fs-5">{{ character.status }}</span>
+        <span v-else-if="character.status === 'Dead'"
+            class="badge text-bg-danger position-absolute top-0 end-0 m-3 p-2 fs-5">{{ character.status }}</span>
+        <span v-else="character.status === 'unknown'"
+            class="badge text-bg-secondary position-absolute top-0 end-0 m-3 p-2 fs-5">{{ character.status }}</span>
+
+        <img :src="character.image" class="card-img-top imageCards" :alt="character.name">
+
+        <div class="card-body">
+            <h5 class="cardTitleCharacters fs-">{{ character.name }}</h5>
+            <p class="card-text fs-4 mt-4">{{ character.species }}</p>
+            <p class="card-text fs-4">
+                <i v-if="character.gender === 'Male'" class="bi bi-gender-male">
+                    {{ character.gender }}</i>
+                <i v-else-if="character.gender === 'Female'" class="bi bi-gender-female">
+                    {{ character.gender }}</i>
+            </p>
+        </div>
+        <div class="card-body">
+            <button><a :href="'/pages/detalis.html?id=' + character.id">Details</a></button>
+
+            <button class="btn position-absolute bottom-0 end-0 m-3 p-2 fs-3">
+                <i :class="character.isFavorite ? 'bi bi-star-fill' : 'bi bi-star'"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de favoritos -->
+<div v-if="favorites.length > 0" class="modal fade" id="favoritesModal" tabindex="-1"
+    aria-labelledby="favoritesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="favoritesModalLabel">Personajes Favoritos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div v-for="favorite in favorites" :key="favorite.id" class="card m-2" style="width: 18rem;">
+                        <img :src="favorite.image" class="card-img-top" :alt="favorite.name">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ favorite.name }}</h5>
+                            <p class="card-text">{{ favorite.species }}</p>
+                            <p class="card-text">{{ favorite.gender }}</p>
+                            <button @click="eliminarFavorito(favorite)" class="btn btn-danger">Remove from
+                                Favorites</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
