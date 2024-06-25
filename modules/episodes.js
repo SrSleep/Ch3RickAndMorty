@@ -6,36 +6,48 @@ const app = createApp({
 
     data() {
         return {
-            productos: [],
-            productosBK:[],
+            episodes: [],
+            episodesBK: [],
             temporadas: [],
             filtroTexto: "",
-            categoriasSeleccionadas: [],
-            paginas: 3,
+            temporadaSeleccionadas: [],
+            page: 1,
+            totalPages:[]
         }
     },
     created() {
-        this.traerData(urlRickAndMorty)
+        this.paginado()
     },
     methods: {
-        traerData(url, url2, url3) {
-            fetch(url, url2, url3)
+        traerData(page) {
+            fetch(urlRickAndMorty + page)
                 .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                    this.productos = data.results;
-                    this.productosBK = data.results;
-                    console.log(this.productos);
-                    this.temporadas = Array.from(new Set(this.productos.map((product) => product.episode.slice(0, 3))))
-                    console.log(this.temporadas);
+                .then((data) => {
+                    console.log(data.results);
+                    this.totalPages = data.info.pages
+                    this.episodes = this.episodes.concat(data.results)
+
+                    this.episodesBK = this.episodesBK.concat(data.results)
+
+                    this.temporadas = Array.from(new Set(this.episodes.map((product) => product.episode.slice(1, 3))))
+
+                    if (page < this.totalPages) {
+                        this.traerData(page + 1);
+                    }
                 })
+        },
+        paginado() {
+            this.traerData(this.page);
         }
     },
     computed: {
         superFiltro() {
-            let filtroText = this.productosBK.filter(producto => producto.name.toLowerCase().includes(this.filtroTexto.toLowerCase()))
-            this.productos = filtroText
-            
+            let filtroText = this.episodesBK.filter(producto => producto.name.toLowerCase().includes(this.filtroTexto.toLowerCase()))
+            if (this.temporadaSeleccionadas.length > 0) {
+                this.episodes = filtroText.filter(producto => this.temporadaSeleccionadas.includes(producto.episode.slice(1, 3)))
+            } else {
+                this.episodes = filtroText
+            }
         }
     },
 
