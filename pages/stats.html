@@ -35,8 +35,8 @@
                             <ul class="navbar-nav ms-auto nav-pills nav-fill gap-2 p-1 small bg-dark rounded-5 shadow-sm mx-4"
                                 id="pillNav2" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <a href="/index.html"><button class="nav-link anckors active rounded-5"
-                                            id="home-tab2" data-bs-toggle="tab" type="button" role="tab"
+                                    <a href="/index.html"><button class="nav-link anckors  rounded-5" id="home-tab2"
+                                            data-bs-toggle="tab" type="button" role="tab"
                                             aria-selected="true">Home</button></a>
                                 </li>
                                 <li class="nav-item" role="presentation">
@@ -55,7 +55,7 @@
                                             aria-selected="false">Localization</button></a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a href="/pages/stats.html"><button class="nav-link anckors rounded-5"
+                                    <a href="/pages/stats.html"><button class="nav-link active anckors rounded-5"
                                             id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
                                             aria-selected="false">Stats</button></a>
                                 </li>
@@ -65,35 +65,38 @@
                 </nav>
             </header>
             <main id="app">
-                <div class="d-flex justify-content-center mt-5 ">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Cateogries</th>
-                                <th scope="col">Amount</th>
-                                <th scope="col">Ave/characters per episode</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Characters</td>
-                                <td>{{estadisticasPer.info?.count}}</td>
-                                <td>{{formatoDecimal(estadisticasPer.info?.count/ estadisticasEpisodes.info?.count)}}</td>
-                            </tr>
-                            <tr>
-
-                                <td>Location</td>
-                                <td>{{estadisticasUbica.info?.count}}</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <td>Episodes</td>
-                                <td>{{estadisticasEpisodes.info?.count}}</td>
-                                <td>@twitter</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <!-- <div class=" divTarjetaStats">
+                    <p></p>
+                    <img src="/resource/portalRick.png" class="backgroundTarjeta" alt="imagen refencia">
+                </div> -->
+                
+                    <div class="d-flex justify-content-evenly divCharacters">
+                        <div class="card backgroundTarjeta text-center">
+                            <div class="card-body divTarjetaStats">
+                                <h5 class="card-title textoTarjetaStats"></h5>
+                                <h6 class="card-subtitle mb-2 textoTarjetaStats">Characters</h6>
+                                <p class="card-text  textoTarjetaStats">Rick and Morty has an immense number of characters, in total there are
+                                    are: {{estadisticasPer.info?.count}}
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="imagenCharactersStats" src="/resource/statscharacters.png" alt="imagen refernce characters">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-evenly divCharacters">
+                        <div>
+                            <img class="imagenlocationStats" src="/resource/locationsStats.jpg" alt="imagen refernce characters">
+                        </div>
+                        <div class="card backgroundTarjeta text-center">
+                            <div class="card-body divTarjetaStats">
+                                <h5 class="card-title textoTarjetaStats"></h5>
+                                <h6 class="card-subtitle mb-2 textoTarjetaStats">Locations</h6>
+                                <p class="card-text  textoTarjetaStats">There are endless worlds and dimensions, but we have seen a total: {{estadisticasUbica.info?.count}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
             </main>
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
