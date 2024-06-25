@@ -237,3 +237,22 @@ li {
         height: 4.5rem; /* Cambia el valor a lo que necesites */
     }
 }
+/* location */
+.imageLocation {
+    height: 50vh;
+
+}
+.selectLocation {
+    margin-top: 330px;
+}
+@media (max-width: 576px) {
+    .selectLocation {
+        margin-top: 50px;
+    }
+}
+#mySelect{
+    background-color: #99F543;
+    color: #040505; border: #13ACC9;
+    box-shadow: 0 0 10px 2px rgb(30, 210, 255);
+   font-weight: bold;
+}
