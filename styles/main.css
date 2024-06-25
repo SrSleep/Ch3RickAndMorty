@@ -89,7 +89,7 @@ li {
 .titleCharacters {
     font-family: "Bungee", sans-serif;
     color: rgba(42, 171, 197, 0.87);
-    font-size: 8vh;
+    /* font-size: 4vw; */
     -webkit-text-stroke: 1.5px #99F543; 
     text-stroke: 1px #99F543;
 }
@@ -169,7 +169,7 @@ li {
     border: none;
     border-radius: 20px;
     padding: 8px;
-    width: 20vh;
+    min-width: 14vw;
 }
 
 .dropdown-toggle-custom:hover, .dropdown-toggle-custom:focus {
@@ -195,4 +195,3 @@ li {
 }
 
 /* details */
-

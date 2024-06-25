@@ -64,7 +64,7 @@
 
             <main id="app">
                 <!-- title -->
-                <h1 class="text-center mt-4 titleCharacters">Characters</h1>
+                <h1 class="text-center mt-4 titleCharacters fs-1">Characters</h1>
 
                 <!-- Search bar -->
                 <div class="container-fluid w-50 my-4">
@@ -79,7 +79,7 @@
                
 
                 <!-- list select-->
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center flex-wrap">
                     <div class="d-flex justify-content-around w-50 mb-4">
                         <div class="dropdown">
                             <button class="btn dropdown-toggle dropdown-toggle-custom" type="button" id="statusDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -124,7 +124,7 @@
                 </div>
 
                 <!-- Containers Cards -->
-                <div class="containerCards my-4 d-flex justify-content-center">
+                <div class="containerCards my-4 d-flex justify-content-center container-fluid">
 
                     <div v-if="filteredCharacters.length === 0" class="text-center">
                         <h2 class="mb-4 text-center textCharacters" >No characters were found matching your search.<br>Try a search term or filter.</h2>
@@ -156,8 +156,11 @@
                                 </p>
                             </div>
                             <div class="card-body">
-                                <a :href="'/pages/detalis.html?id=' + character.id" class="stretched-link"></a>
-                                <button><i class="bi bi-star"></i></button>
+                                <button><a :href="'/pages/detalis.html?id=' + character.id"></a></button>
+
+                                <button @click="toggleFavorite(character)" class="btn position-absolute bottom-0 end-0 m-3 p-2 fs-3">
+                                    <i :class="character.isFavorite ? 'bi bi-star-fill' : 'bi bi-star'"></i>
+                                  </button>
                             </div>
                         </div>
                     </div>
@@ -171,7 +174,7 @@
             <script src="/modules/characters.js"></script>
 
         </div>
-        <footer class="d-flex flex-row justify-content-evenly align-items-center footer">
+        <footer class="d-flex flex-row justify-content-evenly align-items-center footer flex-wrap">
             <a class="users fs-5" href="https://github.com/Brayanfloresf3/"><i
                     class="bi bi-github fs-3 mx-2"></i>BrayanFloresf3</a>
             <a class="users fs-5" href="https://github.com/mmateitto/"><i

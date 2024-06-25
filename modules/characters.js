@@ -62,7 +62,9 @@ createApp({
         })
         .catch((error) => console.error("Error fetching data:", error));
     },
-
+    toggleFavorite(character) {
+      character.isFavorite = !character.isFavorite;
+    },
     searchInput() {},
     filterByStatus(status) {
       this.currentStatusFilter = status;

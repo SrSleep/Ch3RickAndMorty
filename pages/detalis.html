@@ -73,11 +73,11 @@
                     <div class="row g-0">
                         <div class="col-md-4 position-relative">
                             <span v-if="detallesPersonaje.status === 'Alive'"
-                                class="badge text-bg-success position-absolute top-0 end-0 m-3 p-2 fs-5">{{ detallesPersonaje.status }}</span>
+                                class="badge text-bg-success position-absolute top-0 end-2 m-3 p-2 fs-5">{{ detallesPersonaje.status }}</span>
                             <span v-else-if="detallesPersonaje.status === 'Dead'"
-                                class="badge text-bg-danger position-absolute top-0 end-0 m-3 p-2 fs-5">{{ detallesPersonaje.status }}</span>
+                                class="badge text-bg-danger position-absolute top-0 end-2 m-3 p-2 fs-5">{{ detallesPersonaje.status }}</span>
                             <span v-else="detallesPersonaje.status === 'unknown'"
-                                class="badge text-bg-secondary position-absolute top-0 end-0 m-3 p-2 fs-5">{{ detallesPersonaje.status }}</span>
+                                class="badge text-bg-secondary position-absolute top-0 end-2 m-3 p-2 fs-5">{{ detallesPersonaje.status }}</span>
                             <img :src="detallesPersonaje.image" class="img-fluid border rounded "
                                 alt="image reference of character">
                         </div>
