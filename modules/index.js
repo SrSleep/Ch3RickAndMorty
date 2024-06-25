@@ -1,6 +1,6 @@
 let urlApiBase = 'https://rickandmortyapi.com/api/'
 let personajes = urlApiBase + 'character'
-let filtro = 'https://rickandmortyapi.com/api/character/?name=rick&status=alive&page=2'
+let filtro = 'https://rickandmortyapi.com/api/character'
 
 const {createApp} = Vue
 
