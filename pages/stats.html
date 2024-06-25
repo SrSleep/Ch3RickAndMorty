@@ -70,22 +70,20 @@
                     <img src="/resource/portalRick.png" class="backgroundTarjeta" alt="imagen refencia">
                 </div> -->
                 
-                    <div class="d-flex justify-content-evenly divCharacters">
+                    <div class="d-flex flex-wrap justify-content-evenly divCharacters mb-3">
                         <div class="card backgroundTarjeta text-center">
-                            <div class="card-body divTarjetaStats">
-                                <h5 class="card-title textoTarjetaStats"></h5>
-                                <h6 class="card-subtitle mb-2 textoTarjetaStats">Characters</h6>
-                                <p class="card-text  textoTarjetaStats">Rick and Morty has an immense number of characters, in total there are
-                                    are: {{estadisticasPer.info?.count}}
+                            <div class="card-body">
+                                <h5 class="card-title textoTarjetaStats">Characters</h5>
+                                <p class="card-text  textoTarjetaStats">There immense number of characters, in total there are: {{estadisticasPer.info?.count}}
                                 </p>
                             </div>
                         </div>
-                        <div>
+                        <div class="divImagenCharactersStat">
                             <img class="imagenCharactersStats" src="/resource/statscharacters.png" alt="imagen refernce characters">
                         </div>
                     </div>
-                    <div class="d-flex justify-content-evenly divCharacters">
-                        <div>
+                    <div class="d-flex flex-wrap justify-content-evenly divCharacters">
+                        <div class="divImagenLocationStat">
                             <img class="imagenlocationStats" src="/resource/locationsStats.jpg" alt="imagen refernce characters">
                         </div>
                         <div class="card backgroundTarjeta text-center">
@@ -93,6 +91,37 @@
                                 <h5 class="card-title textoTarjetaStats"></h5>
                                 <h6 class="card-subtitle mb-2 textoTarjetaStats">Locations</h6>
                                 <p class="card-text  textoTarjetaStats">There are endless worlds and dimensions, but we have seen a total: {{estadisticasUbica.info?.count}}
+                                </p>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-evenly divCharacters mb-3">
+                        <div class="card backgroundTarjeta text-center">
+                            <div class="card-body divTarjetaStats">
+                                <h5 class="card-title textoTarjetaStats"></h5>
+                                <h6 class="card-subtitle mb-2 textoTarjetaStats">Episodes</h6>
+                                <p class="card-text  textoTarjetaStats">All these characters and locations have been shown in: {{estadisticasEpisodes.info?.count}} episodes
+                                </p>
+                            </div>
+                        </div>
+                        <div class="divImagenEpisodesStat">
+                            <img class="imagenEpisodesStats" src="/resource/episodesStats.png" alt="imagen refernce characters">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-evenly ">
+                        <div class="card backgroundDatos text-center mb-3">
+                            <div class="card-body divTarjetaStats">
+                                <h5 class="card-title textoTarjetaStats"></h5>
+                                <h6 class="card-subtitle mb-2 textoTarjetaStats">Alives Dead and Unknown</h6>
+                                <p class="card-text  textoTarjetaStats">Here we have the characters who are alive, dead, and some who are missing. <br>Alives: {{estadisticasPVivos.info?.count}} Dead: {{estadisticasMuertos.info?.count}} Unknown: {{estadisticasDesconocidos.info?.count}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card backgroundDatos text-center mb-3">
+                            <div class="card-body divTarjetaStats">
+                                <h5 class="card-title textoTarjetaStats"></h5>
+                                <h6 class="card-subtitle mb-2 textoTarjetaStats">Alives Dead and Unknown</h6>
+                                <p class="card-text  textoTarjetaStats">Here we have the characters who are alive, dead, and some who are missing. <br>Alives: {{estadisticasPVivos.info?.count}} Dead: {{estadisticasMuertos.info?.count}} Unknown: {{estadisticasDesconocidos.info?.count}}
                                 </p>
                             </div>
                         </div>

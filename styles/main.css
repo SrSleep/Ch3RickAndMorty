@@ -239,27 +239,20 @@ li {
         height: 4.5rem;
     }
 
-    .imagenCharactersStats {
-        width: 100%;
-        height: 100%;
-        align-self: center;
-    }
-
     .backgroundTarjeta {
-        width: 200px;
+        width: 400px;
         background-color: #99F543;
-        filter: opacity(70%)
     }
 
     .divCharacters {
         height: 150px;
     }
+    
 }
 
 /* location */
 .imageLocation {
     height: 50vh;
-
 }
 
 .selectLocation {
@@ -277,6 +270,7 @@ li {
     .selectLocation {
         margin-top: 50px;
     }
+    
 }
 
 #mySelect {
@@ -301,26 +295,46 @@ li {
     -webkit-text-stroke: 0.5px #13ACC9;
 }
 
+.divImagenCharactersStat {
+    align-self: center;
+}
+.divImagenLocationStat{
+    align-self: center;
+}
+
 .imagenCharactersStats {
-    width: 100%;
-    height: 100%;
+    height: 350px;
     align-self: center;
 }
 
 .backgroundTarjeta {
-    width: 500px;
     height: 100px;
     align-self: center;
+    border-radius: 20px;
     background-color: #99F543;
-    filter: opacity(70%)
 }
 
 .divCharacters {
-    height: 250px;
+    height: 450px;
 }
 
 .imagenlocationStats {
-    width: 100%;
-    height: 100%;
+    height: 350px;
+    object-fit: cover;
     border-radius: 20px;
+}
+.imagenEpisodesStats{
+    width: 350px;
+}
+@media (max-width: 824px) {
+    .divImagenLocationStat{
+        order: 3;
+    }
+}
+
+.backgroundDatos {
+    height: 120px;
+    align-self: center;
+    border-radius: 20px;
+    background-color: #99F543;
 }
