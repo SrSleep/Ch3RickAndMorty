@@ -31,6 +31,22 @@
     width: 20rem;
     margin: 0;
 }
+
+.tituloHome{
+    font-family: "Bungee", sans-serif;
+    color: white;
+    font-size: 3vh;
+}
+
+.textoRobot{
+    font-family: "Roboto Mono", monospace;
+    color: white;
+}
+
+.detalleImagen{
+    width: 20rem;
+    margin: 0;
+}
 /* style characters brayan */
 
 body {
