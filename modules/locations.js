@@ -19,15 +19,15 @@ const app = Vue.createApp({
                 .then(response => response.json())
                 .then(data => {
                     console.log("Datos recibidos de la página 1:", data);
-                    this.ubicaciones = data.results;
+                    this.ubicaciones = data.results
                     const totalPages = data.info.pages;
-                    // Si hay más de una página, iterar y obtener el resto de las ubicaciones
+                    
                     if (totalPages > 1) {
                         const ubicacionesPagina = [];
                         for (let page = 2; page <= totalPages; page++) {
                             ubicacionesPagina.push(fetch(`${urlBase}?page=${page}`).then(response => response.json()));
                         }
-                        // Ejecuta todas las solicitudes en paralelo
+                        
                         Promise.all(ubicacionesPagina)
                             .then(pagesData => {
                                 pagesData.forEach(page => {
@@ -51,25 +51,21 @@ const app = Vue.createApp({
                 .then(response => response.json())
                 .then(data => {
                     console.log("Datos recibidos de la ubicación:", data);
-                    // Obtener todos los residentes de la ubicación (considerando paginación)//
-                    const residentesUrls = data.residents;
+                    
+                    let residentesUrls = data.residents;
                     return this.obtenerDetallesPersonajes(residentesUrls);
                 })
                 .then(residentesDetalles => {
                     console.log("Detalles de residentes recibidos:", residentesDetalles);
                     this.personajesFiltrados = residentesDetalles;
         
-                    // Verifica si no hay personajes filtrados y muestra un mensaje
-                    if (this.personajesFiltrados.length === 0) {
-                        // Puedes mostrar un mensaje o establecer una bandera para manejar esto
-                        console.log("No hay personajes en esta ubicación.");
-                    }
+                    
                 });
         },
         obtenerDetallesPersonajes(residentesUrls) {
             
-            // Mapear cada URL de residente a una promesa que resuelve con los detalles del personaje //
-            const detallesPromesas = residentesUrls.map(url => fetch(url).then(response => response.json()));
+            
+            let detallesPromesas = residentesUrls.map(url => fetch(url).then(response => response.json()));
             return Promise.all(detallesPromesas);
         },
     },

@@ -7,7 +7,7 @@
 }
 
 .logo {
-    width: 50vw;
+    width: 100%;
     height: 60vh;
     object-fit: cover;
 }
@@ -22,11 +22,39 @@
 }
 
 .footer {
+<<<<<<< HEAD
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 3.5rem;
+=======
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+>>>>>>> main
     background-color: rgba(255, 248, 220, 0.301);
+}
+
+.detalleImagen {
+    width: 20rem;
+    margin: 0;
+}
+
+.tituloHome {
+    font-family: "Bungee", sans-serif;
+    color: white;
+    font-size: 3vh;
+}
+
+.textoRobot {
+    font-family: "Roboto Mono", monospace;
+    color: white;
+}
+
+.detalleImagen {
+    width: 20rem;
+    margin: 0;
 }
 
 /* style characters brayan */
@@ -41,8 +69,14 @@ body {
     height: auto;
 }
 
+<<<<<<< HEAD
 main{
     margin-bottom: 2vh;
+=======
+main {
+    min-height: 67vh;
+    margin-bottom: 4vh;
+>>>>>>> main
 }
 
 .logoPrincipal {
@@ -52,7 +86,7 @@ main{
 
 .navbar-custom {
     background-color: transparent;
-    
+
 }
 
 .anckors.active {
@@ -64,7 +98,7 @@ main{
 .anckors:hover {
     box-shadow: 0 0 10px 2px rgb(138, 246, 36);
     background-color: #99F543 !important;
-    
+
 }
 
 a {
@@ -91,9 +125,11 @@ li {
     font-family: "Bungee", sans-serif;
     color: rgba(42, 171, 197, 0.87);
     /* font-size: 4vw; */
-    -webkit-text-stroke: 1.5px #99F543; 
+    -webkit-text-stroke: 1.5px #99F543;
     text-stroke: 1px #99F543;
 }
+
+
 
 .imageCards {
     height: 40vh;
@@ -107,14 +143,14 @@ li {
     border-radius: 20px;
 }
 
-.cardDetails{
+.cardDetails {
     color: black;
     background-color: #A9D3E9;
     border-radius: 20px;
     box-shadow: 0 4px 10px 2px rgb(138, 246, 36);
 }
 
-.cardTitleCharacters{
+.cardTitleCharacters {
     font-family: "Bungee", sans-serif;
 }
 
@@ -130,11 +166,11 @@ li {
     background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path stroke="rgba(255, 255, 255, 0.5)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>');
 }
 
-.users{
+.users {
     color: ivory;
 }
 
-.textCharacters{
+.textCharacters {
     color: ivory;
 }
 
@@ -142,10 +178,10 @@ li {
 .form-control {
     border-radius: 20px;
     border-color: #99F543;
-    padding: 10px 15px; 
-    font-size: 16px; 
-    box-shadow: 0 1px 1px 1px rgb(138, 246, 36); 
-    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    padding: 10px 15px;
+    font-size: 16px;
+    box-shadow: 0 1px 1px 1px rgb(138, 246, 36);
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     background-color: rgb(212, 239, 245);
 }
 
@@ -156,9 +192,9 @@ li {
 }
 
 .bi-search {
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     color: #13ACC9;
-    transition: color 0.3s ease-in-out; 
+    transition: color 0.3s ease-in-out;
 }
 
 /* list select */
@@ -173,26 +209,81 @@ li {
     min-width: 14vw;
 }
 
-.dropdown-toggle-custom:hover, .dropdown-toggle-custom:focus {
+.dropdown-toggle-custom:hover,
+.dropdown-toggle-custom:focus {
     box-shadow: 0 0 10px 2px rgb(138, 246, 36);
     background-color: #99F543;
     color: #13ACC9;
 }
 
 .dropdown-item-custom {
-    color: #13ACC9; 
-  }
+    color: #13ACC9;
+}
 
 .dropdown-menu-custom {
     background-color: #212529;
     color: #13ACC9;
+
 }
 
-.dropdown-item-custom.active, .dropdown-item-custom:hover {
+.dropdown-item-custom.active,
+.dropdown-item-custom:hover {
     box-shadow: 0 0 10px 2px rgb(138, 246, 36);
-    background-color: #99F543 ;
-    color: #13ACC9 ;
+    background-color: #99F543;
+    color: #13ACC9;
     font-weight: bold;
 }
 
+<<<<<<< HEAD
 /* details */
+=======
+/* details */
+.dropdown-toggle-custom-details {
+    box-shadow: 0 0 10px 2px rgba(115, 204, 226, 0.685);
+    background-color: #212529;
+    font-weight: bold;
+    color: #13ACC9;
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+    min-width: 10vw;
+}
+@media (max-width: 776px) {
+    .footer {
+        height: 4.5rem; /* Cambia el valor a lo que necesites */
+    }
+}
+/* location */
+.imageLocation {
+    height: 50vh;
+
+}
+.selectLocation {
+    margin-top: 330px;
+}
+.textLocation {
+    font-family: "Bungee", sans-serif;
+    color: rgb(88, 247, 67);
+    font-size: 4vh;
+    -webkit-text-stroke: 1.5px #13ACC9;
+}
+@media (max-width: 576px) {
+    .selectLocation {
+        margin-top: 50px;
+    }
+}
+#mySelect{
+    box-shadow: 0 0 10px 2px rgba(115, 204, 226, 0.685);
+    background-color: #212529;
+    font-weight: bold;
+    color: #13ACC9;
+    box-shadow: 0 0 10px 2px rgb(30, 210, 255);
+   font-weight: bold;
+}
+#mySelect option:hover{
+    box-shadow: 0 0 10px 2px rgb(138, 246, 36);
+    background-color: #99F543;
+    color: #13ACC9;
+    font-weight: bold;
+}
+>>>>>>> main
