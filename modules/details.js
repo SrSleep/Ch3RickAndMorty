@@ -1,6 +1,6 @@
 let urlGet = new URL(document.location).searchParams;
 let idUrl = urlGet.get('id');
-const urlRickAndMorty = "https://rickandmortyapi.com/api/character/"+idUrl;
+const urlRickAndMorty = "https://rickandmortyapi.com/api/character/" + idUrl;
 
 const { createApp } = Vue
 
@@ -9,7 +9,11 @@ const app = createApp({
         return {
             detallesPersonaje: [],
             listaEpisodios: [],
-            episodios: ""
+            temporada1: [],
+            temporada2: [],
+            temporada3: [],
+            temporada4: [],
+            temporada5: [],
 
         }
     },
@@ -18,16 +22,24 @@ const app = createApp({
     },
     methods: {
         traerData(url) {
-            fetch(url).then(responde => responde.json()).then(data => {
-                this.detallesPersonaje = data
-                console.log(this.detallesPersonaje);
-                for (const cadena of data.episode) { const ultimoNumero = cadena.match(/\d+$/)[0]; this.listaEpisodios.push(ultimoNumero); }
-                this.episodios = this.listaEpisodios.join(', ');
-                
-                console.log(this.episodios);
+            fetch(url)
+                .then(responde => responde.json())
+                .then(data => {
+                    this.detallesPersonaje = data
+                    this.listaEpisodios = this.detallesPersonaje.episode.map(url => fetch(url).then(responde => responde.json()));
+                    Promise.all(this.listaEpisodios)
+                    .then(data =>{
+                        this.listaEpisodios = data
+                        this.temporada1 = data.filter(ep => ep.episode.startsWith('S01'))
+                        this.temporada2 = data.filter(ep => ep.episode.startsWith('S02'))
+                        this.temporada3 = data.filter(ep => ep.episode.startsWith('S03'))
+                        this.temporada4 = data.filter(ep => ep.episode.startsWith('S04'))
+                        this.temporada5 = data.filter(ep => ep.episode.startsWith('S05'))
+                        console.log(this.temporada1.length);
+                    })
+                            
 
-                console.log(this.episodios);
-            })
+                })
         }
 
 
