@@ -246,6 +246,12 @@ li {
 .selectLocation {
     margin-top: 330px;
 }
+.textLocation {
+    font-family: "Bungee", sans-serif;
+    color: rgb(88, 247, 67);
+    font-size: 4vh;
+    -webkit-text-stroke: 1.5px #13ACC9;
+}
 @media (max-width: 576px) {
     .selectLocation {
         margin-top: 50px;
