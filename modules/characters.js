@@ -55,14 +55,14 @@ createApp({
           if (page < this.totalPages) {
             this.fetchData(page + 1);
           }
-
-
+          
         })
         .catch(error => console.error('Error fetching data:', error));
     },
+    
     searchInput() {
-
     },
+
     filterByStatus(status) {
       this.currentStatusFilter = status;
     },

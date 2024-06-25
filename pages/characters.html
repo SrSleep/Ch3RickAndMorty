@@ -77,39 +77,35 @@
 
                 <!-- list select-->
                 <div class="d-flex justify-content-center">
-                    <div class="d-flex justify-content-around w-50 ">
+                    <div class="d-flex justify-content-around w-50">
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="statusDropdown"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn dropdown-toggle dropdown-toggle-custom" type="button" id="statusDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                                 Status
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="statusDropdown">
-                                <li><a class="dropdown-item" href="#" @click="filterByStatus('Alive')">Alive</a></li>
-                                <li><a class="dropdown-item" href="#" @click="filterByStatus('Dead')">Dead</a></li>
-                                <li><a class="dropdown-item" href="#" @click="filterByStatus('unknown')">Unknown</a>
-                                </li>
+                            <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="statusDropdown">
+                                <li><a class="dropdown-item dropdown-item-custom" href="#" @click="filterByStatus('Alive')">Alive</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="#" @click="filterByStatus('Dead')">Dead</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="#" @click="filterByStatus('unknown')">Unknown</a></li>
                             </ul>
                         </div>
-
+        
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="speciesDropdown"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn dropdown-toggle dropdown-toggle-custom" type="button" id="speciesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                                 Species
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="speciesDropdown">
-                                <li><a class="dropdown-item" href="#" @click="filterBySpecies('Human')">Human</a></li>
-                                <li><a class="dropdown-item" href="#" @click="filterBySpecies('Alien')">Alien</a></li>
+                            <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="speciesDropdown">
+                                <li><a class="dropdown-item dropdown-item-custom" href="#" @click="filterBySpecies('Human')">Human</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="#" @click="filterBySpecies('Alien')">Alien</a></li>
                             </ul>
                         </div>
-
+        
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="genderDropdown"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn dropdown-toggle dropdown-toggle-custom" type="button" id="genderDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                                 Gender
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="genderDropdown">
-                                <li><a class="dropdown-item" href="#" @click="filterByGender('Male')">Male</a></li>
-                                <li><a class="dropdown-item" href="#" @click="filterByGender('Female')">Female</a></li>
+                            <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="genderDropdown">
+                                <li><a class="dropdown-item dropdown-item-custom" href="#" @click="filterByGender('Male')">Male</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="#" @click="filterByGender('Female')">Female</a></li>
                             </ul>
                         </div>
                     </div>
