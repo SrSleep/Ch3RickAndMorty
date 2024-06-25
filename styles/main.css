@@ -216,3 +216,13 @@ li {
 }
 
 /* details */
+.dropdown-toggle-custom-details {
+    box-shadow: 0 0 10px 2px rgba(115, 204, 226, 0.685);
+    background-color: #212529;
+    font-weight: bold;
+    color: #13ACC9;
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+    min-width: 10vw;
+}
