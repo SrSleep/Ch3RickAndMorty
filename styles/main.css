@@ -179,6 +179,23 @@ li {
     background-color: rgb(212, 239, 245);
 }
 
+.form-search {
+    border-radius: 20px;
+    border-color: #99F543;
+    padding: 10px 15px;
+    font-size: 16px;
+    box-shadow: 0 1px 1px 1px rgb(138, 246, 36);
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: rgb(212, 239, 245);
+}
+
+.form-search:focus {
+    border-color: #99F543;
+    box-shadow: 0 4px 10px 2px rgb(138, 246, 36);
+    background-color: rgb(212, 239, 245);
+}
+
+
 .bi-search {
     font-size: 1.2rem;
     color: #13ACC9;
