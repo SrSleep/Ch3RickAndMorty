@@ -26,6 +26,7 @@ const app = Vue.createApp({
                     if (totalPages > 1) {
                         const ubicacionesPagina = [];
                         for (let page = 2; page <= totalPages; page++) {
+                            
                             const url = `${urlBase}?page=${page}`;  
 
                             ubicacionesPagina.push(fetch(url).then(response => response.json()));
@@ -75,6 +76,7 @@ const app = Vue.createApp({
             return Promise.all(detallesPromesas);
         },
     },
+
     computed: {
         ubicacionSeleccionada() {
 
