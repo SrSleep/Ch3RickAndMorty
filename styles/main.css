@@ -25,11 +25,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-<<<<<<< HEAD
-    height: 4.5rem;
-=======
     height: 2.5rem;
->>>>>>> main
     background-color: rgba(255, 248, 220, 0.301);
     
 }
@@ -44,7 +40,6 @@
     color: rgba(42, 171, 197, 0.87);
     /* font-size: 4vw; */
     -webkit-text-stroke: 1.5px #99F543;
-    text-stroke: 1px #99F543;
     font-size: 3vh;
 }
 
@@ -123,7 +118,6 @@ li {
     color: rgba(42, 171, 197, 0.87);
     /* font-size: 4vw; */
     -webkit-text-stroke: 1.5px #99F543;
-    text-stroke: 1px #99F543;
 }
 
 
@@ -372,7 +366,6 @@ li {
     color: rgba(42, 171, 197, 0.87);
     /* font-size: 4vw; */
     -webkit-text-stroke: 1.5px #99F543;
-    text-stroke: 1px #99F543;
 }
 .btn-custom-primary {
     background-color: #212529;
@@ -463,16 +456,3 @@ li {
     box-shadow: 0 0 10px 2px rgb(138, 246, 36);
 }
 
-<<<<<<< HEAD
-=======
-/* Estilos para el enlace dentro del botón */
-.btn-custom-link {
-    color: inherit; /* Mantiene el color del texto del botón */
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    display: block; /* Asegura que el enlace llene todo el botón */
-}
-
-.btn-custom-link:hover {
-    color: inherit; /* Mantiene el color del texto al hacer hover */
-}
->>>>>>> main
