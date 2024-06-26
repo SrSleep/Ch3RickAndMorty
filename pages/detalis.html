@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/resource/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -35,8 +35,8 @@
                             <ul class="navbar-nav ms-auto nav-pills nav-fill gap-2 p-1 small bg-dark rounded-5 shadow-sm mx-4"
                                 id="pillNav2" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <a href="/index.html"><button class="nav-link anckors  rounded-5"
-                                            id="home-tab2" data-bs-toggle="tab" type="button" role="tab"
+                                    <a href="/index.html"><button class="nav-link anckors  rounded-5" id="home-tab2"
+                                            data-bs-toggle="tab" type="button" role="tab"
                                             aria-selected="true">Home</button></a>
                                 </li>
                                 <li class="nav-item" role="presentation">
@@ -69,77 +69,99 @@
 
                 <div class="container-fluid d-flex flex-column align-items-center ">
                     <h2 class="card-title titleCharacters mb-4">{{ detallesPersonaje.name }}</h2>
-                <div class="card mb-3 w-75 cardDetails" >
-                    <div class="row g-0">
-                        <div class="col-md-4 position-relative">
-                            <span v-if="detallesPersonaje.status === 'Alive'"
-                                class="badge text-bg-success position-absolute top-0 end-2 m-3 p-2 fs-5">{{ detallesPersonaje.status }}</span>
-                            <span v-else-if="detallesPersonaje.status === 'Dead'"
-                                class="badge text-bg-danger position-absolute top-0 end-2 m-3 p-2 fs-5">{{ detallesPersonaje.status }}</span>
-                            <span v-else="detallesPersonaje.status === 'unknown'"
-                                class="badge text-bg-secondary position-absolute top-0 end-2 m-3 p-2 fs-5">{{ detallesPersonaje.status }}</span>
-                            <img :src="detallesPersonaje.image" class="img-fluid border rounded "
-                                alt="image reference of character">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-    
-                                <p class="card-text"><strong>Species:</strong> {{ detallesPersonaje.species }}</p>
-                                <p class="card-text"><strong>Gender:</strong> {{ detallesPersonaje.gender }}</p>
-                                <p class="card-text"><strong>Location:</strong> {{ detallesPersonaje.location?.name }}
-                                </p>
-                                <p class="card-text"><strong>List of episodes:</strong> {{ episodios }}</p>
-                                <div class="d-flex flex-wrap justify-content-evenly">
-                                    <div class="dropdown me-2 mb-2" v-if="temporada1.length != 0">
-                                        <button class="btn dropdown-toggle dropdown-toggle-custom-details" type="button" id="statusDropdown"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            SEASON 1
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="statusDropdown">
-                                            <li class="dropdown-item-custom" v-for="episodio in temporada1">{{episodio.id}}: {{episodio.name}}</li>
-                                        </ul>
+                    <div class="card mb-3 w-75 cardDetails">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <span v-if="detallesPersonaje.status === 'Alive'"
+                                    class="badge text-bg-success position-absolute top-0 end-2 m-3 p-2 fs-5">{{
+                                    detallesPersonaje.status }}</span>
+                                <span v-else-if="detallesPersonaje.status === 'Dead'"
+                                    class="badge text-bg-danger position-absolute top-0 end-2 m-3 p-2 fs-5">{{
+                                    detallesPersonaje.status }}</span>
+                                <span v-else="detallesPersonaje.status === 'unknown'"
+                                    class="badge text-bg-secondary position-absolute top-0 end-2 m-3 p-2 fs-5">{{
+                                    detallesPersonaje.status }}</span>
+                                <img :src="detallesPersonaje.image" class="img-fluid border rounded "
+                                    alt="image reference of character">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+
+                                    <p class="card-text"><strong>Species:</strong> {{ detallesPersonaje.species }}</p>
+                                    <p class="card-text"><strong>Gender:</strong> {{ detallesPersonaje.gender }}</p>
+                                    <p class="card-text"><strong>Location:</strong> {{ detallesPersonaje.location?.name
+                                        }}
+                                    </p>
+                                    <p class="card-text"><strong>List of episodes:</strong> {{ episodios }}</p>
+                                    <div class="d-flex flex-wrap justify-content-evenly">
+                                        <div class="dropdown me-2 mb-2" v-if="temporada1.length != 0">
+                                            <button class="btn btn-secondary dropdown-toggle dropdown-toggle-custom-details"
+                                                type="button" id="statusDropdown" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                SEASON 1
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-custom"
+                                                aria-labelledby="statusDropdown">
+                                                <li class="dropdown-item-custom" v-for="episodio in temporada1">
+                                                    {{episodio.id}}: {{episodio.name}}</li>
+                                            </ul>
+                                        </div>
+                                        <div class="dropdown me-2 mb-2" v-if="temporada2.length != 0">
+                                            <button class="btn btn-secondary dropdown-toggle dropdown-toggle-custom-details"
+                                                type="button" id="statusDropdown" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                SEASON 2
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-custom"
+                                                aria-labelledby="statusDropdown">
+                                                <li class="dropdown-item-custom" v-for="episodio in temporada2">
+                                                    {{episodio.id}}: {{episodio.name}}</li>
+                                            </ul>
+                                        </div>
+                                        <div class="dropdown me-2 mb-2" v-if="temporada3.length != 0">
+                                            <button
+                                                class="btn btn-secondary dropdown-toggle dropdown-toggle-custom-details"
+                                                type="button" id="statusDropdown" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                SEASON 3
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-custom"
+                                                aria-labelledby="statusDropdown">
+                                                <li class=" dropdown-item-custom" v-for="episodio in temporada3">
+                                                    {{episodio.id}}: {{episodio.name}}</li>
+                                            </ul>
+                                        </div>
+                                        <div class="dropdown me-2 mb-2" v-if="temporada4.length != 0">
+                                            <button
+                                                class="btn btn-secondary dropdown-toggle dropdown-toggle-custom-details"
+                                                type="button" id="statusDropdown" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                SEASON 4
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-custom"
+                                                aria-labelledby="statusDropdown">
+                                                <li class="dropdown-item-custom" v-for="episodio in temporada5">
+                                                    {{episodio.id}}: {{episodio.name}}</li>
+                                            </ul>
+                                        </div>
+                                        <div class="dropdown me-2 mb-2" v-if="temporada5.length != 0">
+                                            <button
+                                                class="btn btn-secondary dropdown-toggle dropdown-toggle-custom-details"
+                                                type="button" id="statusDropdown" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                SEASON 5
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-custom"
+                                                aria-labelledby="statusDropdown">
+                                                <li class="dropdown-item-custom" v-for="episodio in temporada5">
+                                                    {{episodio.id}}: {{episodio.name}}</li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="dropdown me-2 mb-2" v-if="temporada2.length != 0">
-                                        <button class="btn btn-secondary dropdown-toggle dropdown-toggle-custom-details" type="button" id="statusDropdown"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            SEASON 2
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="statusDropdown">
-                                            <li class="dropdown-item-custom" v-for="episodio in temporada2">{{episodio.id}}: {{episodio.name}}</li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown me-2 mb-2" v-if="temporada3.length != 0">
-                                        <button class="btn btn-secondary dropdown-toggle dropdown-toggle-custom-details" type="button" id="statusDropdown"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            SEASON 3
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="statusDropdown">
-                                            <li class=" dropdown-item-custom" v-for="episodio in temporada3">{{episodio.id}}: {{episodio.name}}</li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown me-2 mb-2" v-if="temporada4.length != 0">
-                                        <button class="btn btn-secondary dropdown-toggle dropdown-toggle-custom-details" type="button" id="statusDropdown"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            SEASON 4
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="statusDropdown">
-                                            <li class="dropdown-item-custom" v-for="episodio in temporada5">{{episodio.id}}: {{episodio.name}}</li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown me-2 mb-2" v-if="temporada5.length != 0">
-                                        <button class="btn btn-secondary dropdown-toggle dropdown-toggle-custom-details" type="button" id="statusDropdown"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            SEASON 5
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="statusDropdown">
-                                            <li class="dropdown-item-custom" v-for="episodio in temporada5">{{episodio.id}}: {{episodio.name}}</li>
-                                        </ul>
-                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
             </main>
 
@@ -156,53 +178,10 @@
                     class="bi bi-github fs-3 mx-2"></i>mmateitto</a>
             <a class="users fs-5" href="https://github.com/Jesus-Fernandez1/"><i
                     class="bi bi-github fs-3 mx-2"></i>Jesus-Fernandez1</a>
-            <a class="users fs-5" href="https://github.com/SrSleep/"><i class="bi bi-github fs-3 mx-2"></i>SrSleep</a>
+            <a class="users fs-5" href="https://github.com/SrSleep/">
+                <i class="bi bi-github fs-3 mx-2"></i>SrSleep</a>
         </footer>
     </div>
 </body>
 
-
 </html>
-
-
-
-
-<div v-if="filteredCharacters.length === 0" class="text-center">
-    <h2 class="mb-4 text-center textCharacters">No characters were found matching your
-        search.<br>Try a search term or filter.</h2>
-    <img src="/resource/rickPaginaVacia.png" class="logo" alt="Default Image">
-</div>
-
-<div class="d-flex flex-wrap justify-content-center">
-    <div class="card mx-3 mb-4 cardCharaters" style="width: 18rem;" v-for="character in filteredCharacters"
-        :key="character.id">
-
-        <span v-if="character.status === 'Alive'"
-            class="badge text-bg-success position-absolute top-0 end-0 m-3 p-2 fs-5">{{ character.status }}</span>
-        <span v-else-if="character.status === 'Dead'"
-            class="badge text-bg-danger position-absolute top-0 end-0 m-3 p-2 fs-5">{{ character.status }}</span>
-        <span v-else="character.status === 'unknown'"
-            class="badge text-bg-secondary position-absolute top-0 end-0 m-3 p-2 fs-5">{{ character.status }}</span>
-
-        <img :src="character.image" class="card-img-top imageCards" :alt="character.name">
-
-        <div class="card-body">
-            <h5 class="cardTitleCharacters fs-">{{ character.name }}</h5>
-            <p class="card-text fs-4 mt-4">{{ character.species }}</p>
-            <p class="card-text fs-4">
-                <i v-if="character.gender === 'Male'" class="bi bi-gender-male">
-                    {{ character.gender }}</i>
-                <i v-else-if="character.gender === 'Female'" class="bi bi-gender-female">
-                    {{ character.gender }}</i>
-            </p>
-        </div>
-        <div class="card-body">
-            <button><a :href="'/pages/detalis.html?id=' + character.id">Details</a></button>
-
-            <button class="btn position-absolute bottom-0 end-0 m-3 p-2 fs-3">
-                <i :class="character.isFavorite ? 'bi bi-star-fill' : 'bi bi-star'"></i>
-            </button>
-        </div>
-    </div>
-</div>
-
