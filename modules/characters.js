@@ -50,19 +50,29 @@ createApp({
   },
   methods: {
     fetchCharacters() {
-      fetch(urlRickAndMorty + this.currentPage)
-        .then((response) => response.json())
-        .then((data) => {
-          const resultsWithFavorites = data.results.map((character) => ({
-            ...character,
-            isFavorite: false,
-          }));
-          this.characters = this.characters.concat(resultsWithFavorites);
-          if (data.info.next) {
-            this.fetchCharacters(); // Llamar recursivamente para obtener más personajes
-          }
-        })
-        .catch((error) => console.error("Error fetching data:", error));
+      const fetchPage = (page) => {
+        fetch(urlRickAndMorty + page)
+          .then((response) => response.json())
+          .then((data) => {
+
+            const uniqueCharacters = new Set(this.characters.map((char) => char.id));
+
+            const newCharacters = data.results.filter((character) => !uniqueCharacters.has(character.id))
+              .map((character) => ({
+                ...character,
+                isFavorite: false,
+              }));
+
+            this.characters.push(...newCharacters);
+
+            if (page < this.totalPages) {
+              fetchPage(page + 1);
+            }
+          })
+          .catch((error) => console.error("Error fetching data: ", error));
+      };
+
+      fetchPage(this.currentPage);
     },
     loadFavoritesFromLocalStorage() {
       const localFavorites = JSON.parse(localStorage.getItem('favorites'));
@@ -94,10 +104,12 @@ createApp({
       );
       favoritesModal.show();
     },
-    eliminarFavorito(favorite){
-      this.favorites.splice(favorite,1) 
-      console.log(favorite);
-      localStorage.setItem('favorites',JSON.stringify(this.favorites))
-  }
+    delete(favorite) {
+      const index = this.favorites.findIndex(fav => fav.id === favorite.id);
+      if (index !== -1) {
+        this.favorites.splice(index, 1);
+        localStorage.setItem('favorites', JSON.stringify(this.favorites));
+      }
+    }
   },
 }).mount("#app");
