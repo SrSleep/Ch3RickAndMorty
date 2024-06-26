@@ -24,9 +24,8 @@ const app = createApp({
             fetch(urlRickAndMorty + page)
                 .then(response => response.json())
                 .then((data) => {
-                    
                     this.totalPages = data.info.pages
-
+                    
                     this.episodes = this.episodes.concat(data.results)
 
                     this.episodesBK = this.episodesBK.concat(data.results)
