@@ -25,8 +25,9 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 3.5rem;
+    height: 4.5rem;
     background-color: rgba(255, 248, 220, 0.301);
+    
 }
 
 .detalleImagen {
@@ -162,6 +163,7 @@ li {
 
 /* search bar */
 .form-control {
+    height: 40px;
     border-radius: 20px;
     border-color: #99F543;
     padding: 10px 15px;
@@ -178,6 +180,7 @@ li {
 }
 
 .form-search {
+    height: 40px;
     border-radius: 20px;
     border-color: #99F543;
     padding: 10px 15px;
@@ -248,8 +251,8 @@ li {
     font-size: small;
     border-radius: 30px;
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 15px;
+    right: 15px;
     z-index: 1000;
 }
 
@@ -317,8 +320,8 @@ li {
     font-weight: bold;
     font-size: small;
     border-radius: 30px;
-    display: inline-block;
     text-align: center;
+  
 }
 
 .btn-custom-details:hover {
@@ -327,13 +330,3 @@ li {
     box-shadow: 0 0 10px 2px rgb(138, 246, 36);
 }
 
-/* Estilos para el enlace dentro del botón */
-.btn-custom-link {
-    color: inherit; /* Mantiene el color del texto del botón */
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    display: block; /* Asegura que el enlace llene todo el botón */
-}
-
-.btn-custom-link:hover {
-    color: inherit; /* Mantiene el color del texto al hacer hover */
-}
