@@ -156,12 +156,7 @@
                     class="bi bi-github fs-3 mx-2"></i>mmateitto</a>
             <a class="users fs-5" href="https://github.com/Jesus-Fernandez1/"><i
                     class="bi bi-github fs-3 mx-2"></i>Jesus-Fernandez1</a>
-<<<<<<< HEAD
             <a class="users fs-5" href="https://github.com/SrSleep/"><i class="bi bi-github fs-3 mx-2"></i>SrSleep</a>
-=======
-            <a class="users fs-5" href="https://github.com/SrSleep/">
-                <i class="bi bi-github fs-3 mx-2"></i>SrSleep</a>
->>>>>>> main
         </footer>
     </div>
 </body>
@@ -211,32 +206,3 @@
     </div>
 </div>
 
-<!-- Modal de favoritos -->
-<div v-if="favorites.length > 0" class="modal fade" id="favoritesModal" tabindex="-1"
-    aria-labelledby="favoritesModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="favoritesModalLabel">Personajes Favoritos</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="d-flex flex-wrap justify-content-center">
-                    <div v-for="favorite in favorites" :key="favorite.id" class="card m-2" style="width: 18rem;">
-                        <img :src="favorite.image" class="card-img-top" :alt="favorite.name">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ favorite.name }}</h5>
-                            <p class="card-text">{{ favorite.species }}</p>
-                            <p class="card-text">{{ favorite.gender }}</p>
-                            <button @click="eliminarFavorito(favorite)" class="btn btn-danger">Remove from
-                                Favorites</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            </div>
-        </div>
-    </div>
-</div>

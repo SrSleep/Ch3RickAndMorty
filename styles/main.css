@@ -337,3 +337,52 @@ li {
 .btn-custom-link:hover {
     color: inherit; /* Mantiene el color del texto al hacer hover */
 }
+
+.dropdown-toggle-custom-details {
+    box-shadow: 0 0 10px 2px rgba(115, 204, 226, 0.685);
+    background-color: #212529;
+    font-weight: bold;
+    color: #13ACC9;
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+    min-width: 10vw;
+}
+@media (max-width: 776px) {
+    .footer {
+        height: 4.5rem; /* Cambia el valor a lo que necesites */
+    }
+}
+/* location */
+.imageLocation {
+    height: 50vh;
+
+}
+.selectLocation {
+    margin-top: 330px;
+}
+.textLocation {
+    font-family: "Bungee", sans-serif;
+    color: rgb(88, 247, 67);
+    font-size: 4vh;
+    -webkit-text-stroke: 1.5px #13ACC9;
+}
+@media (max-width: 576px) {
+    .selectLocation {
+        margin-top: 50px;
+    }
+}
+#mySelect{
+    box-shadow: 0 0 10px 2px rgba(115, 204, 226, 0.685);
+    background-color: #212529;
+    font-weight: bold;
+    color: #13ACC9;
+    box-shadow: 0 0 10px 2px rgb(30, 210, 255);
+   font-weight: bold;
+}
+#mySelect option:hover{
+    box-shadow: 0 0 10px 2px rgb(138, 246, 36);
+    background-color: #99F543;
+    color: #13ACC9;
+    font-weight: bold;
+}
