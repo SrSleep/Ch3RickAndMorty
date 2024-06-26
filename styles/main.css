@@ -9,7 +9,7 @@
 .logo {
     width: 100%;
     height: 60vh;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .pageCointainer {
@@ -36,13 +36,17 @@
 
 .tituloHome {
     font-family: "Bungee", sans-serif;
-    color: white;
+    color: rgba(42, 171, 197, 0.87);
+    /* font-size: 4vw; */
+    -webkit-text-stroke: 1.5px #99F543;
+    text-stroke: 1px #99F543;
     font-size: 3vh;
 }
 
 .textoRobot {
     font-family: "Roboto Mono", monospace;
     color: white;
+    font-size: 15px;
 }
 
 .detalleImagen {
@@ -354,4 +358,12 @@ li {
     align-self: center;
     border-radius: 20px;
     background-color: #99F543;
+}
+
+.spanIndex{
+    font-family: "Bungee", sans-serif;
+    color: rgba(42, 171, 197, 0.87);
+    /* font-size: 4vw; */
+    -webkit-text-stroke: 1.5px #99F543;
+    text-stroke: 1px #99F543;
 }

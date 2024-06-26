@@ -20,17 +20,16 @@ const app = createApp({
             estadisticasDesconocidos: [],
             currentPage: 1,
             totalPages: 42,
+            planetas: [],
         }
     },
     created() {
-        this.fetchData(this.currentPage);
         this.traerData(personajes, 'estadisticasPer')
         this.traerData(ubicaciones, 'estadisticasUbica')
         this.traerData(episodios, 'estadisticasEpisodes')
         this.traerData(personajesVivos, 'estadisticasPVivos')
         this.traerData(personajesMuertos, 'estadisticasMuertos')
         this.traerData(personajesDes, 'estadisticasDesconocidos')
-
     },
     methods: {
         traerData(url, variable) {
@@ -38,21 +37,6 @@ const app = createApp({
                 this[variable] = data
             })
         },
-        fetchData(page) {
-            fetch(urlRickAndMorty + page)
-                .then((response) => response.json())
-                .then((data) => {
-                    this.personajes = this.personajes.concat(data.results);
-
-                    if (page <= this.totalPages) {
-                        this.fetchData(page + 1);
-                    }
-                })
-                console.log(this.personajes);
-        },
-        formatoDecimal(value) {
-            return value ? value.toFixed(1) : '0.00';
-        }
     }
 
 
