@@ -24,40 +24,46 @@
             <header>
                 <nav class="navbar navbar-expand-lg navbar-custom">
                     <div class="container-fluid">
-                        <a class="navbar-brand mx-4" href="/index.html"><img class="logoPrincipal"
-                                src="/resource/Logo Rick_and_Morty.svg" alt="logp"></a>
+                        <a class="navbar-brand mx-4" href="/index.html">
+                            <img class="logoPrincipal" src="/resource/Logo_Rick_and_Morty.svg" alt="logo">
+                        </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                             aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse mb-3" id="navbarNav">
-                            <ul class="navbar-nav ms-auto nav-pills nav-fill gap-2 p-1 small bg-dark rounded-5 shadow-sm mx-4"
+                            <ul class="navbar-nav ms-auto nav-pills nav-fill gap-2 p-1 small bg-dark rounded-5 shadow-sm mx-2 mt-2"
                                 id="pillNav2" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <a href="/index.html"><button class="nav-link anckors active rounded-5"
-                                            id="home-tab2" data-bs-toggle="tab" type="button" role="tab"
-                                            aria-selected="true">Home</button></a>
+                                    <a href="/index.html">
+                                        <button class="nav-link anckors rounded-5" id="home-tab2" data-bs-toggle="tab"
+                                            type="button" role="tab" aria-selected="true">Home</button>
+                                    </a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a href="/pages/characters.html"><button class="nav-link anckors rounded-5"
-                                            id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
-                                            aria-selected="false">Characters</button></a>
+                                    <a href="/pages/characters.html">
+                                        <button class="nav-link anckors  rounded-5" id="profile-tab2"
+                                            data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Characters</button>
+                                    </a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a href="/pages/episodes.html"><button class="nav-link anckors rounded-5"
-                                            id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
-                                            aria-selected="false">Episodes</button></a>
+                                    <a href="/pages/episodes.html">
+                                        <button class="nav-link anckors rounded-5" id="profile-tab2" data-bs-toggle="tab"
+                                            type="button" role="tab" aria-selected="false">Episodes</button>
+                                    </a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a href="/pages/locations.html"><button class="nav-link anckors rounded-5"
-                                            id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
-                                            aria-selected="false">Localization</button></a>
+                                    <a href="/pages/locations.html">
+                                        <button class="nav-link anckors rounded-5" id="profile-tab2" data-bs-toggle="tab"
+                                            type="button" role="tab" aria-selected="false">Localization</button>
+                                    </a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a href="/pages/stats.html"><button class="nav-link anckors rounded-5"
-                                            id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
-                                            aria-selected="false">Stats</button></a>
+                                    <a href="/pages/stats.html">
+                                        <button class="nav-link anckors active rounded-5" id="profile-tab2" data-bs-toggle="tab"
+                                            type="button" role="tab" aria-selected="false">Stats</button>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -65,35 +71,55 @@
                 </nav>
             </header>
             <main id="app">
-                <div class="d-flex justify-content-center mt-5 ">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Cateogries</th>
-                                <th scope="col">Amount</th>
-                                <th scope="col">Ave/characters per episode</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Characters</td>
-                                <td>{{estadisticasPer.info?.count}}</td>
-                                <td>{{formatoDecimal(estadisticasPer.info?.count/ estadisticasEpisodes.info?.count)}}</td>
-                            </tr>
-                            <tr>
-
-                                <td>Location</td>
-                                <td>{{estadisticasUbica.info?.count}}</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <td>Episodes</td>
-                                <td>{{estadisticasEpisodes.info?.count}}</td>
-                                <td>@twitter</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <h1 class="text-center mt-4 titleCharacters fs-1">Stats</h1>
+                    <div class="d-flex flex-wrap justify-content-evenly divCharacters mb-3">
+                        <div class="card backgroundTarjeta text-center">
+                            <div class="card-body">
+                                <h5 class="card-title textoTarjetaStats">Characters</h5>
+                                <p class="card-text  textoTarjetaStats">There immense number of characters, in total there are: {{estadisticasPer.info?.count}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="divImagenCharactersStat">
+                            <img class="imagenCharactersStats" src="/resource/statscharacters.png" alt="imagen refernce characters">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-evenly divCharacters">
+                        <div class="divImagenLocationStat">
+                            <img class="imagenlocationStats" src="/resource/locationsStats.jpg" alt="imagen refernce characters">
+                        </div>
+                        <div class="card backgroundTarjeta text-center">
+                            <div class="card-body divTarjetaStats">
+                                <h5 class="card-title textoTarjetaStats"></h5>
+                                <h6 class="card-subtitle mb-2 textoTarjetaStats">Locations</h6>
+                                <p class="card-text  textoTarjetaStats">There are endless worlds and dimensions, but we have seen a total: {{estadisticasUbica.info?.count}}
+                                </p>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-evenly divCharacters mb-3">
+                        <div class="card backgroundTarjeta text-center">
+                            <div class="card-body divTarjetaStats">
+                                <h5 class="card-title textoTarjetaStats"></h5>
+                                <h6 class="card-subtitle mb-2 textoTarjetaStats">Episodes</h6>
+                                <p class="card-text  textoTarjetaStats">All these characters and locations have been shown in: {{estadisticasEpisodes.info?.count}} episodes
+                                </p>
+                            </div>
+                        </div>
+                        <div class="divImagenEpisodesStat">
+                            <img class="imagenEpisodesStats" src="/resource/episodesStats.png" alt="imagen refernce characters">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-evenly ">
+                        <div class="card backgroundDatos text-center mb-3">
+                            <div class="card-body divTarjetaStats">
+                                <h5 class="card-title textoTarjetaStats"></h5>
+                                <h6 class="card-subtitle mb-2 textoTarjetaStats">Alives Dead and Unknown</h6>
+                                <p class="card-text  textoTarjetaStats">Here we have the characters who are alive, dead, and some who are missing. <br>Alives: {{estadisticasPVivos.info?.count}} Dead: {{estadisticasMuertos.info?.count}} Unknown: {{estadisticasDesconocidos.info?.count}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
             </main>
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

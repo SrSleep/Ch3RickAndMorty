@@ -9,7 +9,7 @@
 .logo {
     width: 100%;
     height: 60vh;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .pageCointainer {
@@ -25,7 +25,11 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+<<<<<<< HEAD
     height: 4.5rem;
+=======
+    height: 2.5rem;
+>>>>>>> main
     background-color: rgba(255, 248, 220, 0.301);
     
 }
@@ -37,13 +41,17 @@
 
 .tituloHome {
     font-family: "Bungee", sans-serif;
-    color: white;
+    color: rgba(42, 171, 197, 0.87);
+    /* font-size: 4vw; */
+    -webkit-text-stroke: 1.5px #99F543;
+    text-stroke: 1px #99F543;
     font-size: 3vh;
 }
 
 .textoRobot {
     font-family: "Roboto Mono", monospace;
     color: white;
+    font-size: 15px;
 }
 
 .detalleImagen {
@@ -63,8 +71,9 @@ body {
     height: auto;
 }
 
-main{
-    margin-bottom: 2vh;
+main {
+    min-height: 67vh;
+    margin-bottom: 4vh;
 }
 
 .logoPrincipal {
@@ -112,6 +121,7 @@ li {
 .titleCharacters {
     font-family: "Bungee", sans-serif;
     color: rgba(42, 171, 197, 0.87);
+    /* font-size: 4vw; */
     -webkit-text-stroke: 1.5px #99F543;
     text-stroke: 1px #99F543;
 }
@@ -240,7 +250,130 @@ li {
     font-weight: bold;
 }
 
-/* modal button*/
+/* details */
+.dropdown-toggle-custom-details {
+    box-shadow: 0 0 10px 2px rgba(115, 204, 226, 0.685);
+    background-color: #212529;
+    font-weight: bold;
+    color: #13ACC9;
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+    min-width: 10vw;
+}
+
+@media (max-width: 776px) {
+    .footer {
+        height: 4.5rem;
+    }
+
+    .backgroundTarjeta {
+        width: 400px;
+        background-color: #99F543;
+    }
+
+    .divCharacters {
+        height: 150px;
+    }
+    
+}
+
+/* location */
+.imageLocation {
+    height: 50vh;
+}
+
+.selectLocation {
+    margin-top: 330px;
+}
+
+.textLocation {
+    font-family: "Bungee", sans-serif;
+    color: rgb(88, 247, 67);
+    font-size: 4vh;
+    -webkit-text-stroke: 1.5px #13ACC9;
+}
+
+@media (max-width: 576px) {
+    .selectLocation {
+        margin-top: 50px;
+    }
+    
+}
+
+#mySelect {
+    box-shadow: 0 0 10px 2px rgba(115, 204, 226, 0.685);
+    background-color: #212529;
+    font-weight: bold;
+    color: #13ACC9;
+    box-shadow: 0 0 10px 2px rgb(30, 210, 255);
+    font-weight: bold;
+}
+
+#mySelect option:hover {
+    box-shadow: 0 0 10px 2px rgb(138, 246, 36);
+    background-color: #99F543;
+    color: #13ACC9;
+    font-weight: bold;
+}
+
+.textoTarjetaStats {
+    font-weight: bold;
+    color: rgba(3, 1, 0, 0.993);
+    -webkit-text-stroke: 0.5px #13ACC9;
+}
+
+.divImagenCharactersStat {
+    align-self: center;
+}
+.divImagenLocationStat{
+    align-self: center;
+}
+
+.imagenCharactersStats {
+    height: 350px;
+    align-self: center;
+}
+
+.backgroundTarjeta {
+    height: 100px;
+    align-self: center;
+    border-radius: 20px;
+    background-color: #99F543;
+}
+
+.divCharacters {
+    height: 450px;
+}
+
+.imagenlocationStats {
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.imagenEpisodesStats{
+    width: 350px;
+}
+@media (max-width: 824px) {
+    .divImagenLocationStat{
+        order: 3;
+    }
+}
+
+.backgroundDatos {
+    height: 120px;
+    align-self: center;
+    border-radius: 20px;
+    background-color: #99F543;
+}
+
+.spanIndex{
+    font-family: "Bungee", sans-serif;
+    color: rgba(42, 171, 197, 0.87);
+    /* font-size: 4vw; */
+    -webkit-text-stroke: 1.5px #99F543;
+    text-stroke: 1px #99F543;
+}
 .btn-custom-primary {
     background-color: #212529;
     color: #13ACC9;
@@ -330,3 +463,16 @@ li {
     box-shadow: 0 0 10px 2px rgb(138, 246, 36);
 }
 
+<<<<<<< HEAD
+=======
+/* Estilos para el enlace dentro del botón */
+.btn-custom-link {
+    color: inherit; /* Mantiene el color del texto del botón */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    display: block; /* Asegura que el enlace llene todo el botón */
+}
+
+.btn-custom-link:hover {
+    color: inherit; /* Mantiene el color del texto al hacer hover */
+}
+>>>>>>> main
