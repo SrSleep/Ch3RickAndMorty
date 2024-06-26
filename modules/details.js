@@ -36,8 +36,6 @@ const app = createApp({
                         this.temporada4 = data.filter(ep => ep.episode.startsWith('S04'))
                         this.temporada5 = data.filter(ep => ep.episode.startsWith('S05'))
                     })
-                            
-
                 })
         }
 

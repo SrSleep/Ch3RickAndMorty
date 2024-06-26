@@ -17,7 +17,6 @@ const app = createApp({
         traerData(url) {
             fetch(url).then(responde => responde.json()).then(data => {
                 this.personajesPrincipales = data.results.slice(0,5);
-                console.log(this.personajesPrincipales)
             })
         }
     }

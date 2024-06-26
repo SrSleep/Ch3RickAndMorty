@@ -42,7 +42,6 @@ const app = createApp({
         },
         paginado() {
             this.traerData(this.page);
-            console.log(this.ids);
         }
     },
     computed: {

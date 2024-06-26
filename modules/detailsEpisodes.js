@@ -27,7 +27,6 @@ const app = createApp({
                             .then(response => response.json())
                             .then((data) => {
                                 this.filtrados = this.filtrados.concat(data)
-                                console.log(this.filtrados);
                             })
                     });
                 })

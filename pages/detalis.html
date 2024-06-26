@@ -113,7 +113,7 @@
                                             <ul class="dropdown-menu dropdown-menu-custom"
                                                 aria-labelledby="statusDropdown">
                                                 <li class="dropdown-item-custom" v-for="episodio in temporada1">
-                                                    {{episodio.id}}: {{episodio.name}}</li>
+                                                    <a class="dropdown-item dropdown-item-custom" :href="'./detailsEpisodes.html?value=' + episodio.id"> {{episodio.id}}: {{episodio.name}}</a></li>
                                             </ul>
                                         </div>
                                         <div class="dropdown me-2 mb-2" v-if="temporada2.length != 0">
@@ -124,8 +124,8 @@
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-custom"
                                                 aria-labelledby="statusDropdown">
-                                                <li class="dropdown-item-custom" v-for="episodio in temporada2">
-                                                    {{episodio.id}}: {{episodio.name}}</li>
+                                                <li class="dropdown-item-custom" v-for="episodio in temporada2"><a class="dropdown-item dropdown-item-custom" :href="'./detailsEpisodes.html?value=' + episodio.id">
+                                                    {{episodio.id}}: {{episodio.name}}</a></li>
                                             </ul>
                                         </div>
                                         <div class="dropdown me-2 mb-2" v-if="temporada3.length != 0">
@@ -137,8 +137,8 @@
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-custom"
                                                 aria-labelledby="statusDropdown">
-                                                <li class=" dropdown-item-custom" v-for="episodio in temporada3">
-                                                    {{episodio.id}}: {{episodio.name}}</li>
+                                                <li class=" dropdown-item-custom" v-for="episodio in temporada3"><a class="dropdown-item dropdown-item-custom" :href="'./detailsEpisodes.html?value=' + episodio.id">
+                                                    {{episodio.id}}: {{episodio.name}}</a></li>
                                             </ul>
                                         </div>
                                         <div class="dropdown me-2 mb-2" v-if="temporada4.length != 0">
@@ -150,8 +150,8 @@
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-custom"
                                                 aria-labelledby="statusDropdown">
-                                                <li class="dropdown-item-custom" v-for="episodio in temporada5">
-                                                    {{episodio.id}}: {{episodio.name}}</li>
+                                                <li class="dropdown-item-custom" v-for="episodio in temporada4"><a class="dropdown-item dropdown-item-custom" :href="'./detailsEpisodes.html?value=' + episodio.id">
+                                                    {{episodio.id}}: {{episodio.name}}</a></li>
                                             </ul>
                                         </div>
                                         <div class="dropdown me-2 mb-2" v-if="temporada5.length != 0">
@@ -163,8 +163,8 @@
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-custom"
                                                 aria-labelledby="statusDropdown">
-                                                <li class="dropdown-item-custom" v-for="episodio in temporada5">
-                                                    {{episodio.id}}: {{episodio.name}}</li>
+                                                <li class="dropdown-item-custom" v-for="episodio in temporada5"><a class="dropdown-item dropdown-item-custom" :href="'./detailsEpisodes.html?value=' + episodio.id">
+                                                    {{episodio.id}}: {{episodio.name}}</a></li>
                                             </ul>
                                         </div>
                                     </div>

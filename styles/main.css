@@ -455,3 +455,13 @@ li {
     color: #13ACC9;
     box-shadow: 0 0 10px 2px rgb(138, 246, 36);
 }
+
+.backgroundTarjeta:hover{
+    color: #13ACC9;
+    box-shadow: 0 0 10px 2px  #13ACC9;
+}
+
+.backgroundDatos:hover{
+    color: #13ACC9;
+    box-shadow: 0 0 10px 2px  #13ACC9;
+}
