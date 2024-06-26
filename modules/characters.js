@@ -54,24 +54,23 @@ createApp({
         fetch(urlRickAndMorty + page)
           .then((response) => response.json())
           .then((data) => {
-
             const uniqueCharacters = new Set(this.characters.map((char) => char.id));
-
+            
             const newCharacters = data.results.filter((character) => !uniqueCharacters.has(character.id))
               .map((character) => ({
                 ...character,
                 isFavorite: false,
               }));
-
+    
             this.characters.push(...newCharacters);
-
+    
             if (page < this.totalPages) {
               fetchPage(page + 1);
             }
           })
           .catch((error) => console.error("Error fetching data: ", error));
       };
-
+    
       fetchPage(this.currentPage);
     },
     loadFavoritesFromLocalStorage() {
@@ -81,11 +80,13 @@ createApp({
       }
     },
     toggleFavorite(character) {
-      character.isFavorite = !character.isFavorite;
-      if (character.isFavorite) {
+      const favoriteIndex = this.favorites.findIndex((fav) => fav.id === character.id);
+      if (favoriteIndex === -1) {
+        character.isFavorite = true;
         this.favorites.push(character);
       } else {
-        this.favorites = this.favorites.filter((fav) => fav.id !== character.id);
+        character.isFavorite = false;
+        this.favorites.splice(favoriteIndex, 1);
       }
       localStorage.setItem('favorites', JSON.stringify(this.favorites));
     },
@@ -104,7 +105,7 @@ createApp({
       );
       favoritesModal.show();
     },
-    delete(favorite) {
+    eliminarFavorito(favorite) {
       const index = this.favorites.findIndex(fav => fav.id === favorite.id);
       if (index !== -1) {
         this.favorites.splice(index, 1);
