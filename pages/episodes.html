@@ -16,104 +16,112 @@
 </head>
 
 <body background="galaxia.jpg">
-
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-custom">
-            <div class="container-fluid">
-                <a class="navbar-brand mx-4" href="/index.html"><img class="logoPrincipal"
-                        src="/resource/Logo Rick_and_Morty.svg" alt="logp"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse mb-3" id="navbarNav">
-                    <ul class="navbar-nav ms-auto nav-pills nav-fill gap-2 p-1 small bg-dark rounded-5 shadow-sm mx-4"
-                        id="pillNav2" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <a href="/index.html"><button class="nav-link anckors rounded-5" id="home-tab2"
-                                    data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Home</button></a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a href="/pages/characters.html"><button class="nav-link anckors rounded-5"
-                                    id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
-                                    aria-selected="false">Characters</button></a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a href="/pages/characters.html"><button class="nav-link anckors active rounded-5"
-                                    id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
-                                    aria-selected="false">Episodes</button></a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a href="/pages/locations.html"><button class="nav-link anckors rounded-5" id="profile-tab2"
-                                    data-bs-toggle="tab" type="button" role="tab"
-                                    aria-selected="false">Localization</button></a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a href="/pages/stats.html"><button class="nav-link anckors rounded-5" id="profile-tab2"
-                                    data-bs-toggle="tab" type="button" role="tab"
-                                    aria-selected="false">Stats</button></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main id="app">
-        <h1 class="text-center mt-4 titleCharacters">Episodes</h1>
-
-        <div>
-            {{superFiltro}}
-            <div class="container-fluid w-50 my-4">
-                <div class="input-group">
-                    <input v-model="filtroTexto" type="search" class="form-control " placeholder="Search"
-                        aria-label="Search" id="search">
-                    <span class="input-group-text form-search"><i class="bi bi-search"></i></span>
-                </div>
-            </div>
-
-            <div class="d-flex justify-content-center">
-                <div class="d-flex justify-content-center">
-                    <div class="mx-2"
-                        v-for="temporada in temporadas">
-                        <div class="bg-info  bg-opacity-75 rounded" >
-                            <input v-model="temporadaSeleccionadas" type="checkbox" class="btn-check" autocomplete="off"
-                                :id="temporada" :value="temporada">
-                            <label class="btn btn-outline-success text-white" :for="temporada">Season: {{temporada}}</label>
+    <div class="pageCointainer">
+        <div class="contentWrap">
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-custom">
+                    <div class="container-fluid">
+                        <a class="navbar-brand mx-4" href="/index.html"><img class="logoPrincipal"
+                                src="/resource/Logo Rick_and_Morty.svg" alt="logp"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse mb-3" id="navbarNav">
+                            <ul class="navbar-nav ms-auto nav-pills nav-fill gap-2 p-1 small bg-dark rounded-5 shadow-sm mx-4"
+                                id="pillNav2" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a href="/index.html"><button class="nav-link anckors rounded-5" id="home-tab2"
+                                            data-bs-toggle="tab" type="button" role="tab"
+                                            aria-selected="true">Home</button></a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a href="/pages/characters.html"><button class="nav-link anckors rounded-5"
+                                            id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
+                                            aria-selected="false">Characters</button></a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a href="/pages/characters.html"><button class="nav-link anckors active rounded-5"
+                                            id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
+                                            aria-selected="false">Episodes</button></a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a href="/pages/locations.html"><button class="nav-link anckors rounded-5"
+                                            id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
+                                            aria-selected="false">Localization</button></a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a href="/pages/stats.html"><button class="nav-link anckors rounded-5"
+                                            id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
+                                            aria-selected="false">Stats</button></a>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
+                </nav>
+            </header>
 
+            <main id="app">
+                <h1 class="text-center mt-4 titleCharacters">Episodes</h1>
+
+                <div>
+                    {{superFiltro}}
+                    <div class="container-fluid w-50 my-4">
+                        <div class="input-group">
+                            <input v-model="filtroTexto" type="search" class="form-control " placeholder="Search"
+                                aria-label="Search" id="search">
+                            <span class="input-group-text form-search"><i class="bi bi-search"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="mx-2" v-for="temporada in temporadas">
+                                <div class="bg-info  bg-opacity-75 rounded">
+                                    <input v-model="temporadaSeleccionadas" type="checkbox" class="btn-check"
+                                        autocomplete="off" :id="temporada" :value="temporada">
+                                    <label class="btn btn-outline-success text-white" :for="temporada">Season:
+                                        {{temporada}}</label>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-
-        <div id="cards" class="m-2 row row-cols-1 row-cols-md-4 row-cols-lg-6 d-flex justify-content-center">
-            <div v-if="episodes.length == 0" class="w-100 d-flex flex-column justify-content-center align-items-center">
-                <h2 class="my-2 text-center display-4 fw-bold textLocation">There are no episodes related to your search.</h2>
-                <img src="/resource/rickPaginaVacia.png" class="img-fluid"
-                    alt="Default Image">
-            </div>
-            <div class="card col m-3" style="width: 18rem;" v-for="episode in episodes">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <h5 class="card-title mb-2 p-1">{{episode.name}}</h5>
-                    <h6 class="card-subtitle mt-1 text-body-secondary">Date: {{episode.air_date}}</h6>
-                    <h6 class="card-subtitle mt-1 text-body-secondary">Episode : {{episode.episode}}</h6>
-                    <a href="./detailsEpisodes.html" class="bg-success  bg-opacity-75 rounded btn btn-outline-info text-white my-3 ">Characters in this episode</a>
+                <div id="cards" class="m-2 row row-cols-1 row-cols-md-4 row-cols-lg-6 d-flex justify-content-center">
+                    <div v-if="episodes.length == 0"
+                        class="w-100 d-flex flex-column justify-content-center align-items-center">
+                        <h2 class="my-2 text-center display-4 fw-bold textLocation">There are no episodes related to
+                            your search.</h2>
+                        <img src="/resource/rickPaginaVacia.png" class="img-fluid" alt="Default Image">
+                    </div>
+                    <div class="card col m-3" style="width: 18rem;" v-for="episode in episodes">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title mb-2 p-1">{{episode.name}}</h5>
+                            <h6 class="card-subtitle mt-1 text-body-secondary">Date: {{episode.air_date}}</h6>
+                            <h6 class="card-subtitle mt-1 text-body-secondary">Episode : {{episode.episode}}</h6>
+                            <a :href="'./detailsEpisodes.html?value=' + episode.id"
+                                class="bg-success  bg-opacity-75 rounded btn btn-outline-info text-white my-3 ">Characters
+                                in this episode</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </main>
         </div>
-    </main>
 
-    <footer class="mt-5 d-flex flex-row justify-content-evenly align-items-center footer flex-wrap">
-        <a class="users fs-5" href="https://github.com/Brayanfloresf3/"><i
-                class="bi bi-github fs-3 mx-2"></i>BrayanFloresf3</a>
-        <a class="users fs-5" href="https://github.com/mmateitto/"><i
-                class="bi bi-github fs-3 mx-2"></i>mmateitto</a>
-        <a class="users fs-5" href="https://github.com/Jesus-Fernandez1/"><i
-                class="bi bi-github fs-3 mx-2"></i>Jesus-Fernandez1</a>
-        <a class="users fs-5" href="https://github.com/SrSleep/"><i class="bi bi-github fs-3 mx-2"></i>SrSleep</a>
-    </footer>
+        <footer class="d-flex flex-row justify-content-evenly mt-3 align-items-center footer">
+            <a class="users fs-5" href="https://github.com/Brayanfloresf3/"><i
+                    class="bi bi-github fs-3 mx-2"></i>BrayanFloresf3</a>
+            <a class="users fs-5" href="https://github.com/mmateitto/"><i
+                    class="bi bi-github fs-3 mx-2"></i>mmateitto</a>
+            <a class="users fs-5" href="https://github.com/Jesus-Fernandez1/"><i
+                    class="bi bi-github fs-3 mx-2"></i>Jesus-Fernandez1</a>
+            <a class="users fs-5" href="https://github.com/SrSleep/"><i class="bi bi-github fs-3 mx-2"></i>SrSleep</a>
+            <a class="users fs-5" href=""><i class="bi bi-github fs-3 mx-2"></i>Andres Bustos</a>
+        </footer>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

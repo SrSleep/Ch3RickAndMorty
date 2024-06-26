@@ -12,7 +12,8 @@ const app = createApp({
             filtroTexto: "",
             temporadaSeleccionadas: [],
             page: 1,
-            totalPages:[]
+            totalPages:[],
+            ids: []
         }
     },
     created() {
@@ -23,8 +24,9 @@ const app = createApp({
             fetch(urlRickAndMorty + page)
                 .then(response => response.json())
                 .then((data) => {
-                    console.log(data.results);
+                    
                     this.totalPages = data.info.pages
+
                     this.episodes = this.episodes.concat(data.results)
 
                     this.episodesBK = this.episodesBK.concat(data.results)
@@ -34,10 +36,14 @@ const app = createApp({
                     if (page < this.totalPages) {
                         this.traerData(page + 1);
                     }
+
+                    this.ids = this.episodes.map(element => element.id);
+                    
                 })
         },
         paginado() {
             this.traerData(this.page);
+            console.log(this.ids);
         }
     },
     computed: {
@@ -49,6 +55,5 @@ const app = createApp({
                 this.episodes = filtroText
             }
         }
-    },
-
+    }
 }).mount('#app')
