@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="shortcut icon" href="/resource/favicon.ico" type="image/x-icon">
     <title>locations</title>
 </head>
 
@@ -24,46 +25,51 @@
 
                 <nav class="navbar navbar-expand-lg navbar-custom">
                     <div class="container-fluid">
-                        <a class="navbar-brand mx-4" href="/index.html"><img class="logoPrincipal"
-                                src="/resource/Logo Rick_and_Morty.svg" alt="logp"></a>
+                        <a class="navbar-brand mx-4" href="/index.html">
+                            <img class="logoPrincipal" src="/resource/Logo_Rick_and_Morty.svg" alt="logo">
+                        </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                             aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse mb-3" id="navbarNav">
-                            <ul class="navbar-nav ms-auto nav-pills nav-fill gap-2 p-1 small bg-dark rounded-5 shadow-sm mx-4"
+                            <ul class="navbar-nav ms-auto nav-pills nav-fill gap-2 p-1 small bg-dark rounded-5 shadow-sm mx-2 mt-2"
                                 id="pillNav2" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <a href="/index.html"><button class="nav-link anckors rounded-5" id="home-tab2"
-                                            data-bs-toggle="tab" type="button" role="tab"
-                                            aria-selected="true">Home</button></a>
+                                    <a href="/index.html">
+                                        <button class="nav-link anckors rounded-5" id="home-tab2" data-bs-toggle="tab"
+                                            type="button" role="tab" aria-selected="true">Home</button>
+                                    </a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a href="/pages/characters.html"><button class="nav-link anckors  rounded-5"
-                                            id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
-                                            aria-selected="false">Characters</button></a>
+                                    <a href="/pages/characters.html">
+                                        <button class="nav-link anckors  rounded-5" id="profile-tab2"
+                                            data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Characters</button>
+                                    </a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a href="/pages/episodes.html"><button class="nav-link anckors rounded-5"
-                                            id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
-                                            aria-selected="false">Episodes</button></a>
+                                    <a href="/pages/episodes.html">
+                                        <button class="nav-link anckors rounded-5" id="profile-tab2" data-bs-toggle="tab"
+                                            type="button" role="tab" aria-selected="false">Episodes</button>
+                                    </a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a href="/pages/locations.html"><button class="nav-link anckors active rounded-5"
-                                            id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
-                                            aria-selected="false">Localization</button></a>
+                                    <a href="/pages/locations.html">
+                                        <button class="nav-link anckors active rounded-5" id="profile-tab2" data-bs-toggle="tab"
+                                            type="button" role="tab" aria-selected="false">Localization</button>
+                                    </a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a href="/pages/stats.html"><button class="nav-link anckors rounded-5"
-                                            id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
-                                            aria-selected="false">Stats</button></a>
+                                    <a href="/pages/stats.html">
+                                        <button class="nav-link anckors rounded-5" id="profile-tab2" data-bs-toggle="tab"
+                                            type="button" role="tab" aria-selected="false">Stats</button>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </nav>
-
 
             </header>
 
@@ -71,7 +77,7 @@
 
             <main id="app">
 
-                <div class="container container-fluid">
+                <div class="container container-fluid my-4">
 
 
 
@@ -79,7 +85,8 @@
                         <div class="row  mb-4">
                             <div class="position-relative col-sm-3 ">
                                 <div class="selectLocation  ">
-                                    <select id="mySelect" class="form-select custom-select  text-center selectLocation " style="width: 150px;" aria-label="Default select example"
+                                    <select id="mySelect" class="form-select custom-select  text-center selectLocation "
+                                        style="width: 250px;" aria-label="Default select example"
                                         v-model="filtroUbicacion" v-on:change="filtrarPersonajesPorUbicacion">
                                         <option value="">Locations</option>
                                         <option v-for="ubicacion in ubicaciones" :key="ubicacion.id"
@@ -134,7 +141,7 @@
                                     <h2 class="my-3 text-center display-4 fw-bold textLocation">There are no characters
                                         in this location</h2>
                                     <img src="/resource/rickPaginaVacia.png" class="img-fluid imageLocation"
-                                        alt="Default Image">
+                                        alt="Empty location">
                                 </div>
 
                                 <div v-if="filtroUbicacion === '' && ubicaciones.length > 0" class="text-center my-4">
@@ -143,8 +150,8 @@
                                     <div class="my-4">
 
                                         <img src="/resource/rickPosition1.png" class="mb-4 imageLocation"
-                                            alt="Default Image">
-                                        
+                                            alt="Select a location Rick">
+
                                     </div>
                                 </div>
                             </div>
@@ -158,12 +165,12 @@
                         crossorigin="anonymous"></script>
                     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
                     <script src="../modules/locations.js" type="module"></script>
-
+                </div>
             </main>
 
 
         </div>
-        <footer class="d-flex flex-row justify-content-evenly mt-3 align-items-center footer">
+        <footer class="d-flex footer mt-4 justify-content-evenly align-items-center footer flex-wrap">
             <a class="users fs-5" href="https://github.com/Brayanfloresf3/"><i
                     class="bi bi-github fs-3 mx-2"></i>BrayanFloresf3</a>
             <a class="users fs-5" href="https://github.com/mmateitto/"><i
@@ -171,8 +178,8 @@
             <a class="users fs-5" href="https://github.com/Jesus-Fernandez1/"><i
                     class="bi bi-github fs-3 mx-2"></i>Jesus-Fernandez1</a>
             <a class="users fs-5" href="https://github.com/SrSleep/"><i class="bi bi-github fs-3 mx-2"></i>SrSleep</a>
-            <a class="users fs-5" href=""><i class="bi bi-github fs-3 mx-2"></i>Andres Bustos</a>
         </footer>
+
 
 
 

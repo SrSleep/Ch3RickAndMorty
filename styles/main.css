@@ -9,7 +9,7 @@
 .logo {
     width: 100%;
     height: 60vh;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .pageCointainer {
@@ -22,7 +22,7 @@
 }
 
 .footer {
-    position:absolute;
+    position: absolute;
     bottom: 0;
     width: 100%;
     height: 2.5rem;
@@ -36,13 +36,17 @@
 
 .tituloHome {
     font-family: "Bungee", sans-serif;
-    color: white;
+    color: rgba(42, 171, 197, 0.87);
+    /* font-size: 4vw; */
+    -webkit-text-stroke: 1.5px #99F543;
+    text-stroke: 1px #99F543;
     font-size: 3vh;
 }
 
 .textoRobot {
     font-family: "Roboto Mono", monospace;
     color: white;
+    font-size: 15px;
 }
 
 .detalleImagen {
@@ -250,41 +254,215 @@ li {
     padding: 8px;
     min-width: 10vw;
 }
+
 @media (max-width: 776px) {
     .footer {
-        height: 4.5rem; /* Cambia el valor a lo que necesites */
+        height: 4.5rem;
     }
+
+    .backgroundTarjeta {
+        width: 400px;
+        background-color: #99F543;
+    }
+
+    .divCharacters {
+        height: 150px;
+    }
+    
 }
+
 /* location */
 .imageLocation {
     height: 50vh;
-
 }
+
 .selectLocation {
     margin-top: 330px;
 }
+
 .textLocation {
     font-family: "Bungee", sans-serif;
     color: rgb(88, 247, 67);
     font-size: 4vh;
     -webkit-text-stroke: 1.5px #13ACC9;
 }
+
 @media (max-width: 576px) {
     .selectLocation {
         margin-top: 50px;
     }
+    
 }
-#mySelect{
+
+#mySelect {
     box-shadow: 0 0 10px 2px rgba(115, 204, 226, 0.685);
     background-color: #212529;
     font-weight: bold;
     color: #13ACC9;
     box-shadow: 0 0 10px 2px rgb(30, 210, 255);
-   font-weight: bold;
+    font-weight: bold;
 }
-#mySelect option:hover{
+
+#mySelect option:hover {
     box-shadow: 0 0 10px 2px rgb(138, 246, 36);
     background-color: #99F543;
     color: #13ACC9;
     font-weight: bold;
+}
+
+.textoTarjetaStats {
+    font-weight: bold;
+    color: rgba(3, 1, 0, 0.993);
+    -webkit-text-stroke: 0.5px #13ACC9;
+}
+
+.divImagenCharactersStat {
+    align-self: center;
+}
+.divImagenLocationStat{
+    align-self: center;
+}
+
+.imagenCharactersStats {
+    height: 350px;
+    align-self: center;
+}
+
+.backgroundTarjeta {
+    height: 100px;
+    align-self: center;
+    border-radius: 20px;
+    background-color: #99F543;
+}
+
+.divCharacters {
+    height: 450px;
+}
+
+.imagenlocationStats {
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.imagenEpisodesStats{
+    width: 350px;
+}
+@media (max-width: 824px) {
+    .divImagenLocationStat{
+        order: 3;
+    }
+}
+
+.backgroundDatos {
+    height: 120px;
+    align-self: center;
+    border-radius: 20px;
+    background-color: #99F543;
+}
+
+.spanIndex{
+    font-family: "Bungee", sans-serif;
+    color: rgba(42, 171, 197, 0.87);
+    /* font-size: 4vw; */
+    -webkit-text-stroke: 1.5px #99F543;
+    text-stroke: 1px #99F543;
+}
+.btn-custom-primary {
+    background-color: #212529;
+    color: #13ACC9;
+    box-shadow: 0 0 10px 2px rgba(115, 204, 226, 0.685);
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: small;
+    border-radius: 30px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.btn-custom-primary:hover {
+    background-color: #99F543;
+    box-shadow: 0 0 10px 2px rgb(138, 246, 36);
+}
+
+/* container modal */
+
+#favoritesModal {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #212529;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background-color: #212529;
+    color: #13ACC9;
+    border-bottom: none;
+    text-shadow: 0 0 10px 2px rgba(115, 204, 226, 0.685);
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    background-color: #212529;
+    border-top: none;
+}
+
+.btn-custom-delete {
+    background-color: #212529;
+    color: #13ACC9;
+    box-shadow: 0 0 10px 2px rgba(115, 204, 226, 0.685);
+    border: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    font-size: small;
+    border-radius: 30px;
+}
+
+.btn-custom-delete:hover {
+    background-color: #99F543;
+    color: #13ACC9;
+    box-shadow: 0 0 10px 2px rgb(138, 246, 36);
+}
+
+
+.btn-custom-details {
+    background-color: #212529;
+    color: #13ACC9;
+    box-shadow: 0 0 10px 2px rgba(115, 204, 226, 0.685);
+    border: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    font-size: small;
+    border-radius: 30px;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-custom-details:hover {
+    background-color: #99F543;
+    color: #13ACC9;
+    box-shadow: 0 0 10px 2px rgb(138, 246, 36);
+}
+
+/* Estilos para el enlace dentro del botón */
+.btn-custom-link {
+    color: inherit; /* Mantiene el color del texto del botón */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    display: block; /* Asegura que el enlace llene todo el botón */
+}
+
+.btn-custom-link:hover {
+    color: inherit; /* Mantiene el color del texto al hacer hover */
 }

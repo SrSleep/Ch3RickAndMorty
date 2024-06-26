@@ -12,10 +12,12 @@ createApp({
       currentStatusFilter: "",
       currentSpeciesFilter: "",
       currentGenderFilter: "",
+      favorites: [],
     };
   },
   created() {
-    this.fetchAllCharacters();
+    this.fetchCharacters();
+    this.loadFavoritesFromLocalStorage();
   },
   computed: {
     filteredCharacters() {
@@ -47,25 +49,46 @@ createApp({
     },
   },
   methods: {
-    fetchAllCharacters() {
-      this.fetchData(this.currentPage);
-    },
-    fetchData(page) {
-      fetch(urlRickAndMorty + page)
-        .then((response) => response.json())
-        .then((data) => {
-          this.characters = this.characters.concat(data.results);
+    fetchCharacters() {
+      const fetchPage = (page) => {
+        fetch(urlRickAndMorty + page)
+          .then((response) => response.json())
+          .then((data) => {
 
-          if (page < this.totalPages) {
-            this.fetchData(page + 1);
-          }
-        })
-        .catch((error) => console.error("Error fetching data:", error));
+            const uniqueCharacters = new Set(this.characters.map((char) => char.id));
+
+            const newCharacters = data.results.filter((character) => !uniqueCharacters.has(character.id))
+              .map((character) => ({
+                ...character,
+                isFavorite: false,
+              }));
+
+            this.characters.push(...newCharacters);
+
+            if (page < this.totalPages) {
+              fetchPage(page + 1);
+            }
+          })
+          .catch((error) => console.error("Error fetching data: ", error));
+      };
+
+      fetchPage(this.currentPage);
+    },
+    loadFavoritesFromLocalStorage() {
+      const localFavorites = JSON.parse(localStorage.getItem('favorites'));
+      if (localFavorites) {
+        this.favorites = localFavorites;
+      }
     },
     toggleFavorite(character) {
       character.isFavorite = !character.isFavorite;
+      if (character.isFavorite) {
+        this.favorites.push(character);
+      } else {
+        this.favorites = this.favorites.filter((fav) => fav.id !== character.id);
+      }
+      localStorage.setItem('favorites', JSON.stringify(this.favorites));
     },
-    searchInput() {},
     filterByStatus(status) {
       this.currentStatusFilter = status;
     },
@@ -75,5 +98,18 @@ createApp({
     filterByGender(gender) {
       this.currentGenderFilter = gender;
     },
+    openFavoritesModal() {
+      const favoritesModal = new bootstrap.Modal(
+        document.getElementById("favoritesModal")
+      );
+      favoritesModal.show();
+    },
+    delete(favorite) {
+      const index = this.favorites.findIndex(fav => fav.id === favorite.id);
+      if (index !== -1) {
+        this.favorites.splice(index, 1);
+        localStorage.setItem('favorites', JSON.stringify(this.favorites));
+      }
+    }
   },
 }).mount("#app");
