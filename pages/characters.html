@@ -56,7 +56,7 @@
                                     <a href="/pages/locations.html">
                                         <button class="nav-link anckors rounded-5" id="profile-tab2"
                                             data-bs-toggle="tab" type="button" role="tab"
-                                            aria-selected="false">Localization</button>
+                                            aria-selected="false">Location</button>
                                     </a>
                                 </li>
                                 <li class="nav-item" role="presentation">
@@ -152,6 +152,11 @@
 
                 <!-- Containers Cards -->
                 <div class="containerCards my-4 d-flex justify-content-center container-fluid">
+                    <div v-if="filteredCharacters.length === 0" class="text-center my-4">
+                        <h2 class="my-3 text-center fw-bold titleCharacters">There are no characters related to your search.</h2>
+                        <img src="/resource/rickPaginaVacia.png" class="img-fluid imageLocation"
+                            alt="Empty location">
+                    </div>
                     <div class="containerCards my-4 d-flex justify-content-center">
                         <div class="d-flex flex-wrap justify-content-center ml-4">
                             <div class="card mx-3 mb-4 cardCharaters" style="width: 18rem;"
