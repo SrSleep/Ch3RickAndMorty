@@ -25,8 +25,13 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+<<<<<<< HEAD
+    height: 4.5rem;
+=======
     height: 2.5rem;
+>>>>>>> main
     background-color: rgba(255, 248, 220, 0.301);
+    
 }
 
 .detalleImagen {
@@ -168,6 +173,7 @@ li {
 
 /* search bar */
 .form-control {
+    height: 40px;
     border-radius: 20px;
     border-color: #99F543;
     padding: 10px 15px;
@@ -184,6 +190,7 @@ li {
 }
 
 .form-search {
+    height: 40px;
     border-radius: 20px;
     border-color: #99F543;
     padding: 10px 15px;
@@ -377,8 +384,8 @@ li {
     font-size: small;
     border-radius: 30px;
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 15px;
+    right: 15px;
     z-index: 1000;
 }
 
@@ -446,8 +453,8 @@ li {
     font-weight: bold;
     font-size: small;
     border-radius: 30px;
-    display: inline-block;
     text-align: center;
+  
 }
 
 .btn-custom-details:hover {
@@ -456,6 +463,8 @@ li {
     box-shadow: 0 0 10px 2px rgb(138, 246, 36);
 }
 
+<<<<<<< HEAD
+=======
 /* Estilos para el enlace dentro del botón */
 .btn-custom-link {
     color: inherit; /* Mantiene el color del texto del botón */
@@ -466,3 +475,4 @@ li {
 .btn-custom-link:hover {
     color: inherit; /* Mantiene el color del texto al hacer hover */
 }
+>>>>>>> main
