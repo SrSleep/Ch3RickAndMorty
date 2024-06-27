@@ -84,9 +84,9 @@
                     <div class=" ">
                         <div class="row  mb-4">
                             <div class="position-relative col-sm-3 ">
-                                <div class="selectLocation  ">
-                                    <select id="mySelect" class="form-select custom-select  text-center selectLocation "
-                                        style="width: 250px;" aria-label="Default select example"
+                                <div class="selectLocation">
+                                    <select id="mySelect" class="form-select custom-select  text-center responsive-select selectLocation "
+                                       aria-label="Default select example"
                                         v-model="filtroUbicacion" v-on:change="filtrarPersonajesPorUbicacion">
                                         <option value="">Locations</option>
                                         <option v-for="ubicacion in ubicaciones" :key="ubicacion.id"

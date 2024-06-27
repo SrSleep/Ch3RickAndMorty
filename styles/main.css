@@ -27,7 +27,7 @@
     width: 100%;
     height: 4.5rem;
     background-color: rgba(0, 0, 0, 0.882);
-    
+
 }
 
 .detalleImagen {
@@ -57,10 +57,10 @@
 /* style characters brayan */
 
 body {
-    
-    background-image: url(/resource/fondo2.png);
-    background-size: 100%;
-    background-repeat: repeat;
+    background-image: url('/resource/fondo2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
 }
@@ -268,8 +268,8 @@ li {
     .divCharacters {
         height: 150px;
     }
-    
-    
+
+
 }
 
 /* location */
@@ -292,7 +292,7 @@ li {
     .selectLocation {
         margin-top: 50px;
     }
-    
+
 }
 
 #mySelect {
@@ -320,7 +320,8 @@ li {
 .divImagenCharactersStat {
     align-self: center;
 }
-.divImagenLocationStat{
+
+.divImagenLocationStat {
     align-self: center;
 }
 
@@ -345,11 +346,13 @@ li {
     object-fit: cover;
     border-radius: 20px;
 }
-.imagenEpisodesStats{
+
+.imagenEpisodesStats {
     width: 350px;
 }
+
 @media (max-width: 824px) {
-    .divImagenLocationStat{
+    .divImagenLocationStat {
         order: 3;
     }
 }
@@ -361,12 +364,13 @@ li {
     background-color: #99F543;
 }
 
-.spanIndex{
+.spanIndex {
     font-family: "Bungee", sans-serif;
     color: rgba(42, 171, 197, 0.87);
     /* font-size: 4vw; */
     -webkit-text-stroke: 1.5px #99F543;
 }
+
 .btn-custom-primary {
     background-color: #212529;
     color: #13ACC9;
@@ -447,7 +451,7 @@ li {
     font-size: small;
     border-radius: 30px;
     text-align: center;
-  
+
 }
 
 .btn-custom-details:hover {
@@ -456,18 +460,35 @@ li {
     box-shadow: 0 0 10px 2px rgb(138, 246, 36);
 }
 
-.backgroundTarjeta:hover{
+.backgroundTarjeta:hover {
     color: #13ACC9;
-    box-shadow: 0 0 10px 2px  #13ACC9;
+    box-shadow: 0 0 10px 2px #13ACC9;
 }
 
-.backgroundDatos:hover{
+.backgroundDatos:hover {
     color: #13ACC9;
-    box-shadow: 0 0 10px 2px  #13ACC9;
+    box-shadow: 0 0 10px 2px #13ACC9;
 }
-.logoPortal{
+
+.logoPortal {
     height: 60px;
 }
-.imagenDetalles{
+
+.imagenDetalles {
     height: 350px;
+}
+.responsive-select {
+    width: 330px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .responsive-select {
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .responsive-select {
+        width: 100%;
+    }
 }
