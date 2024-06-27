@@ -56,7 +56,7 @@
                                     <a href="/pages/locations.html">
                                         <button class="nav-link anckors rounded-5" id="profile-tab2"
                                             data-bs-toggle="tab" type="button" role="tab"
-                                            aria-selected="false">Location</button>
+                                            aria-selected="false">Localization</button>
                                     </a>
                                 </li>
                                 <li class="nav-item" role="presentation">
@@ -94,69 +94,50 @@
                         <div class="dropdown">
                             <button class="btn dropdown-toggle dropdown-toggle-custom" type="button" id="statusDropdown"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                Status
+                                {{ selectedStatus }}
                             </button>
                             <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="statusDropdown">
-                                <li><a class="dropdown-item dropdown-item-custom"
-                                        @click="filterByStatus('Alive')">Alive</a></li>
-                                <li><a class="dropdown-item dropdown-item-custom"
-                                        @click="filterByStatus('Dead')">Dead</a></li>
-                                <li><a class="dropdown-item dropdown-item-custom"
-                                        @click="filterByStatus('unknown')">Unknown</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" @click="filterByStatus('Alive')">Alive</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" @click="filterByStatus('Dead')">Dead</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" @click="filterByStatus('unknown')">Unknown</a></li>
                             </ul>
                         </div>
-
+                    
                         <div class="dropdown">
-                            <button class="btn dropdown-toggle dropdown-toggle-custom" type="button"
-                                id="speciesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                Species
+                            <button class="btn dropdown-toggle dropdown-toggle-custom" type="button" id="speciesDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                {{ selectedSpecies }}
                             </button>
                             <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="speciesDropdown">
-                                <li><a class="dropdown-item dropdown-item-custom"
-                                        @click="filterBySpecies('Human')">Human</a></li>
-                                <li><a class="dropdown-item dropdown-item-custom"
-                                        @click="filterBySpecies('Alien')">Alien</a></li>
-                                <li><a class="dropdown-item dropdown-item-custom"
-                                        @click="filterBySpecies('Humanoid')">Humanoid</a></li>
-                                <li><a class="dropdown-item dropdown-item-custom"
-                                        @click="filterBySpecies('unknown')">Unknown</a></li>
-                                <li><a class="dropdown-item dropdown-item-custom"
-                                        @click="filterBySpecies('Poopybutthole')">Poopybutthole</a></li>
-                                <li><a class="dropdown-item dropdown-item-custom"
-                                        @click="filterBySpecies('Mythological Creature')">Mythological Creature</a></li>
-                                <li><a class="dropdown-item dropdown-item-custom"
-                                        @click="filterBySpecies('Animal')">Animal</a></li>
-                                <li><a class="dropdown-item dropdown-item-custom"
-                                        @click="filterBySpecies('Robot')">Robot</a></li>
-                                <li><a class="dropdown-item dropdown-item-custom"
-                                        @click="filterBySpecies('Cronenberg')">Cronenberg</a></li>
-                                <li><a class="dropdown-item dropdown-item-custom"
-                                        @click="filterBySpecies('Disease')">Disease</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" @click="filterBySpecies('Human')">Human</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" @click="filterBySpecies('Alien')">Alien</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" @click="filterBySpecies('Humanoid')">Humanoid</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" @click="filterBySpecies('unknown')">Unknown</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" @click="filterBySpecies('Poopybutthole')">Poopybutthole</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" @click="filterBySpecies('Mythological Creature')">Mythological Creature</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" @click="filterBySpecies('Animal')">Animal</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" @click="filterBySpecies('Robot')">Robot</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" @click="filterBySpecies('Cronenberg')">Cronenberg</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" @click="filterBySpecies('Disease')">Disease</a></li>
                             </ul>
                         </div>
-
+                    
                         <div class="dropdown">
                             <button class="btn dropdown-toggle dropdown-toggle-custom" type="button" id="genderDropdown"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                Gender
+                                {{ selectedGender }}
                             </button>
                             <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="genderDropdown">
-                                <li><a class="dropdown-item dropdown-item-custom"
-                                        @click="filterByGender('Male')">Male</a></li>
-                                <li><a class="dropdown-item dropdown-item-custom"
-                                        @click="filterByGender('Female')">Female</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" @click="filterByGender('Male')">Male</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" @click="filterByGender('Female')">Female</a></li>
                             </ul>
                         </div>
                     </div>
+                    
                 </div>
 
                 <!-- Containers Cards -->
                 <div class="containerCards my-4 d-flex justify-content-center container-fluid">
-                    <div v-if="filteredCharacters.length === 0" class="text-center my-4">
-                        <h2 class="my-3 text-center fw-bold titleCharacters">There are no characters related to your search.</h2>
-                        <img src="/resource/rickPaginaVacia.png" class="img-fluid imageLocation"
-                            alt="Empty location">
-                    </div>
                     <div class="containerCards my-4 d-flex justify-content-center">
                         <div class="d-flex flex-wrap justify-content-center ml-4">
                             <div class="card mx-3 mb-4 cardCharaters" style="width: 18rem;"
@@ -181,8 +162,9 @@
                                     </p>
                                 </div>
                                 <div class="card-body">
-                              
-                                  <a class="btn-custom-details mb-2" :href="'/pages/detalis.html?id=' + character.id">Details</a>
+
+                                    <a class="btn-custom-details mb-2"
+                                        :href="'/pages/detalis.html?id=' + character.id">Details</a>
 
                                     <button @click="toggleFavorite(character)"
                                         class="btn position-absolute bottom-0 end-0 m-3 p-2 fs-3">
@@ -239,22 +221,22 @@
         </div>
         <footer class="d-flex flex-wrap justify-content-between align-items-center footer">
             <div class="d-none d-lg-block align-items-start">
-              <img src="/resource/portalRick.png" class="logoPortal" alt="">
-            </div> 
-              <div>
-              <a class="users fs-5" href="https://github.com/Brayanfloresf3/"><i
-                      class="bi bi-github fs-3 mx-2"></i>BrayanFloresf3</a>
-              <a class="users fs-5" href="https://github.com/mmateitto/"><i
-                      class="bi bi-github fs-3 mx-2"></i>mmateitto</a>
-              <a class="users fs-5" href="https://github.com/Jesus-Fernandez1/"><i
-                      class="bi bi-github fs-3 mx-2"></i>Jesus-Fernandez1</a>
-              <a class="users fs-5" href="https://github.com/SrSleep/">
-                  <i class="bi bi-github fs-3 mx-2"></i>SrSleep</a>
-              </div>
-              <div class="d-none d-lg-block">
-                  <img src="/resource/portalRick.png" class="logoPortal" alt="">
-              </div>
-          </footer>
+                <img src="/resource/portalRick.png" class="logoPortal" alt="">
+            </div>
+            <div>
+                <a class="users fs-5" href="https://github.com/Brayanfloresf3/"><i
+                        class="bi bi-github fs-3 mx-2"></i>BrayanFloresf3</a>
+                <a class="users fs-5" href="https://github.com/mmateitto/"><i
+                        class="bi bi-github fs-3 mx-2"></i>mmateitto</a>
+                <a class="users fs-5" href="https://github.com/Jesus-Fernandez1/"><i
+                        class="bi bi-github fs-3 mx-2"></i>Jesus-Fernandez1</a>
+                <a class="users fs-5" href="https://github.com/SrSleep/">
+                    <i class="bi bi-github fs-3 mx-2"></i>SrSleep</a>
+            </div>
+            <div class="d-none d-lg-block">
+                <img src="/resource/portalRick.png" class="logoPortal" alt="">
+            </div>
+        </footer>
     </div>
 </body>
 

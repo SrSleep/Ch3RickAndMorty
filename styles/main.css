@@ -492,3 +492,41 @@ li {
         width: 100%;
     }
 }
+/* checkbox */
+.checkbox-custom {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+  }
+
+  .custom-checkbox:checked {
+    background-color: #99F543;
+    color: #13ACC9;
+    box-shadow: 0 0 10px 2px rgb(138, 246, 36);
+  }
+
+  .custom-checkbox-label {
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #13ACC9  !important;
+    border: none;
+    cursor: pointer;
+    background-color: #212529;
+    border-radius: 30px;
+    box-shadow: 0 0 10px 2px rgba(115, 204, 226, 0.685);
+  }
+
+
+  .custom-checkbox:checked + .custom-checkbox-label,
+  .custom-checkbox-label:hover {
+    background-color: #99F543 !important;
+    color: #13ACC9  !important;
+    box-shadow: 0 0 10px 2px rgb(138, 246, 36);
+  }
+
+  .textoRobotoEpisodes{
+    font-family: "Roboto Mono", monospace;
+    color: black;
+    font-size: 18px;
+  }

@@ -1,18 +1,20 @@
 const urlRickAndMorty = "https://rickandmortyapi.com/api/character/?page=";
 
 const { createApp } = Vue;
-
 createApp({
   data() {
     return {
       characters: [],
+      favorites: [],
       currentPage: 1,
       totalPages: 42,
       searchText: "",
       currentStatusFilter: "",
       currentSpeciesFilter: "",
       currentGenderFilter: "",
-      favorites: [],
+      selectedStatus: 'Status',
+      selectedSpecies: 'Species',
+      selectedGender: 'Gender'
     };
   },
   created() {
@@ -92,12 +94,15 @@ createApp({
     },
     filterByStatus(status) {
       this.currentStatusFilter = status;
+      this.selectedStatus = status;
     },
     filterBySpecies(species) {
       this.currentSpeciesFilter = species;
+      this.selectedSpecies = species;
     },
     filterByGender(gender) {
       this.currentGenderFilter = gender;
+      this.selectedGender = gender;
     },
     openFavoritesModal() {
       const favoritesModal = new bootstrap.Modal(
