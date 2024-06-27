@@ -176,6 +176,11 @@
                     </div>
 
                     <!-- Modal de favoritos -->
+                    <div v-if="filteredCharacters.length === 0" class="text-center my-4">
+                        <h2 class="my-3 text-center fw-bold titleCharacters">There are no characters related to your search.</h2>
+                        <img src="/resource/rickPaginaVacia.png" class="img-fluid imageLocation"
+                            alt="Empty location">
+                    </div>
                     <div class="modal fade" id="favoritesModal" tabindex="-1" aria-labelledby="favoritesModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog modal-lg">
