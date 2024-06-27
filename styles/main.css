@@ -25,8 +25,8 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 2.5rem;
-    background-color: rgba(255, 248, 220, 0.301);
+    height: 4.5rem;
+    background-color: rgba(0, 0, 0, 0.882);
     
 }
 
@@ -57,13 +57,12 @@
 /* style characters brayan */
 
 body {
+    
     background-image: url(/resource/fondo2.png);
     background-size: 100%;
     background-repeat: repeat;
-    background-size: 100%;
     margin: 0;
     padding: 0;
-    height: auto;
 }
 
 main {
@@ -270,6 +269,7 @@ li {
         height: 150px;
     }
     
+    
 }
 
 /* location */
@@ -464,4 +464,10 @@ li {
 .backgroundDatos:hover{
     color: #13ACC9;
     box-shadow: 0 0 10px 2px  #13ACC9;
+}
+.logoPortal{
+    height: 60px;
+}
+.imagenDetalles{
+    height: 350px;
 }

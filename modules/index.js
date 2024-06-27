@@ -1,23 +1,19 @@
-let urlApiBase = 'https://rickandmortyapi.com/api/'
-let personajes = urlApiBase + 'character'
-let filtro = 'https://rickandmortyapi.com/api/character'
 
 const {createApp} = Vue
 
 const app = createApp({
     data() {
         return{
-            personajesPrincipales:[],
+            randomP:""
         }
     },
     created() {
-        this.traerData(personajes)
+        this.getRandomNumber()
     },
     methods: {
-        traerData(url) {
-            fetch(url).then(responde => responde.json()).then(data => {
-                this.personajesPrincipales = data.results.slice(0,5);
-            })
+        getRandomNumber() {
+            this.randomP = Math.floor(Math.random() * 826) + 1;
+            console.log(this.randomP);
         }
     }
 
